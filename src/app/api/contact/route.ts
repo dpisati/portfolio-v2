@@ -63,7 +63,6 @@ export async function POST(req: Request) {
       CONTACT_SMTP_USER,
       CONTACT_SMTP_PASS,
       CONTACT_TO,
-      CONTACT_FROM,
     } = process.env;
 
     if (

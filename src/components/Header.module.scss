@@ -8,13 +8,8 @@
     mask-size: 100% 100%;
 }
 
-.position {
-    scale: 1.2;
-}
-
 @media (max-width: breakpoints.$s) {
-    .position {        
-        scale: 1.5;
+    .position {                
         top: auto;
         bottom: var(--static-space-24);
     }
