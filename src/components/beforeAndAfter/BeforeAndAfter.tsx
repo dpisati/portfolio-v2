@@ -40,7 +40,7 @@ export const BeforeAndAfter: React.FC<BeforeAndAfterProps> = ({
 }) => {
   const ref = React.useRef<HTMLDivElement | null>(null);
   const [value, setValue] = React.useState(() =>
-    Math.min(HOVER_MAX, Math.max(HOVER_MIN, initial))
+    Math.min(HOVER_MAX, Math.max(HOVER_MIN, initial)),
   );
 
   const vertical = orientation === "vertical";
@@ -49,7 +49,7 @@ export const BeforeAndAfter: React.FC<BeforeAndAfterProps> = ({
     setValue(Math.min(HOVER_MAX, Math.max(HOVER_MIN, initial)));
   }, [initial]);
 
-  // pointer / hover handling
+  // pointer / hover / touch handling
   React.useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -76,8 +76,24 @@ export const BeforeAndAfter: React.FC<BeforeAndAfterProps> = ({
       updateFromEvent(e.clientX, e.clientY);
     }
 
+    // Touch event handlers for mobile
+    function onTouchStart(e: TouchEvent) {
+      if (!el) return;
+      if (e.touches.length > 0) {
+        updateFromEvent(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }
+    function onTouchMove(e: TouchEvent) {
+      if (!el) return;
+      if (e.touches.length > 0) {
+        updateFromEvent(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }
+
     if (hover) {
       el.addEventListener("mousemove", onMouseMove);
+      el.addEventListener("touchstart", onTouchStart, { passive: false });
+      el.addEventListener("touchmove", onTouchMove, { passive: false });
     } else {
       window.addEventListener("pointermove", onPointerMove);
     }
@@ -85,6 +101,8 @@ export const BeforeAndAfter: React.FC<BeforeAndAfterProps> = ({
     return () => {
       if (hover) {
         el.removeEventListener("mousemove", onMouseMove);
+        el.removeEventListener("touchstart", onTouchStart);
+        el.removeEventListener("touchmove", onTouchMove);
       } else {
         window.removeEventListener("pointermove", onPointerMove);
       }
@@ -117,7 +135,7 @@ export const BeforeAndAfter: React.FC<BeforeAndAfterProps> = ({
       className={classNames(
         styles.container,
         vertical && styles.vertical,
-        className
+        className,
       )}
       style={containerStyle}
       {...rest}
