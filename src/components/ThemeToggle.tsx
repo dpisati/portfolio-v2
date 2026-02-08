@@ -16,11 +16,19 @@ export const ThemeToggle: React.FC = () => {
   const icon = currentTheme === "dark" ? "light" : "dark";
   const nextTheme = currentTheme === "light" ? "dark" : "light";
 
+  const handleToggle = () => {
+    setTheme(nextTheme);
+  };
+
   return (
     <ToggleButton
       size="l"
       prefixIcon={icon}
-      onClick={() => setTheme(nextTheme)}
+      onClick={handleToggle}
+      onTouchEnd={(e: React.TouchEvent) => {
+        e.preventDefault();
+        handleToggle();
+      }}
       aria-label={`Switch to ${nextTheme} mode`}
     />
   );
