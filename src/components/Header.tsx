@@ -113,7 +113,7 @@ export const Header = () => {
             shadow="l"
             padding="4"
             horizontal="center"
-            zIndex={1}
+            zIndex={2}
           >
             <Row
               gap="4"
@@ -223,20 +223,15 @@ export const Header = () => {
             </Row>
           </Row>
         </Row>
-        <Flex fillWidth horizontal="end" vertical="center" style={{ pointerEvents: 'none' }}>
-          <Flex
-            paddingRight="12"
-            horizontal="end"
-            vertical="center"
-            textVariant="body-default-s"
-            gap="20"
-            style={{ pointerEvents: 'auto' }}
-          >
-            <Flex s={{ hide: true }}>
-              {display.time && <TimeDisplay timeZone={person.location} />}
-            </Flex>
-          </Flex>
-        </Flex>
+        <Flex
+          fillWidth
+          horizontal="end"
+          vertical="center"
+          style={{
+            pointerEvents: "none",
+            zIndex: 1,
+          }}
+        />
       </Row>
     </>
   );
