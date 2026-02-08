@@ -8,8 +8,12 @@
     mask-size: 100% 100%;
 }
 
+.navContainer {
+    touch-action: manipulation;
+}
+
 @media (max-width: breakpoints.$s) {
-    .position {                
+    .position {
         top: auto;
         bottom: var(--static-space-24);
     }
@@ -17,5 +21,10 @@
     .mask {
         transform: rotate(180deg);
         bottom: 0;
+    }
+
+    .navContainer {
+        scale: 1 !important;
+        touch-action: manipulation;
     }
 }

@@ -101,6 +101,7 @@ export const Header = () => {
           padding="4"
           fillWidth
           horizontal="center"
+          className={styles.navContainer}
           style={{
             scale: 1.2,
           }}
@@ -222,13 +223,14 @@ export const Header = () => {
             </Row>
           </Row>
         </Row>
-        <Flex fillWidth horizontal="end" vertical="center">
+        <Flex fillWidth horizontal="end" vertical="center" style={{ pointerEvents: 'none' }}>
           <Flex
             paddingRight="12"
             horizontal="end"
             vertical="center"
             textVariant="body-default-s"
             gap="20"
+            style={{ pointerEvents: 'auto' }}
           >
             <Flex s={{ hide: true }}>
               {display.time && <TimeDisplay timeZone={person.location} />}
