@@ -7,7 +7,7 @@ import {
   Column,
   Heading,
   Input,
-  Opacity,
+  opacity as OpacityType,
   Row,
   SpacingToken,
   Text,
@@ -109,7 +109,7 @@ export function ContactForm({ ...flex }: ContactFormProps) {
         }}
         gradient={{
           display: mailchimp.effects.gradient.display,
-          opacity: mailchimp.effects.gradient.opacity as Opacity,
+          opacity: mailchimp.effects.gradient.opacity as OpacityType,
           x: mailchimp.effects.gradient.x,
           y: mailchimp.effects.gradient.y,
           width: mailchimp.effects.gradient.width,
@@ -120,20 +120,20 @@ export function ContactForm({ ...flex }: ContactFormProps) {
         }}
         dots={{
           display: mailchimp.effects.dots.display,
-          opacity: mailchimp.effects.dots.opacity as Opacity,
+          opacity: mailchimp.effects.dots.opacity as OpacityType,
           size: mailchimp.effects.dots.size as SpacingToken,
           color: mailchimp.effects.dots.color,
         }}
         grid={{
           display: mailchimp.effects.grid.display,
-          opacity: mailchimp.effects.grid.opacity as Opacity,
+          opacity: mailchimp.effects.grid.opacity as OpacityType,
           color: mailchimp.effects.grid.color,
           width: mailchimp.effects.grid.width,
           height: mailchimp.effects.grid.height,
         }}
         lines={{
           display: mailchimp.effects.lines.display,
-          opacity: mailchimp.effects.lines.opacity as Opacity,
+          opacity: mailchimp.effects.lines.opacity as OpacityType,
           size: mailchimp.effects.lines.size as SpacingToken,
           thickness: mailchimp.effects.lines.thickness,
           angle: mailchimp.effects.lines.angle,
