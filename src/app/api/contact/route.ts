@@ -90,9 +90,9 @@ export async function POST(req: Request) {
 
     const from = CONTACT_SMTP_USER;
 
-    const message = {
+    const notification = {
       from,
-      to: body.email || CONTACT_TO,
+      to: CONTACT_TO,
       replyTo: body.email,
       subject: `Portfolio Contact: ${body.name}`,
       text: body.message,
@@ -103,7 +103,18 @@ export async function POST(req: Request) {
       }</p><p>${body.message?.replace(/\n/g, "<br/>")}</p>`,
     };
 
-    await transporter.sendMail(message);
+    const autoReply = {
+      from,
+      to: body.email,
+      subject: "Thanks for reaching out!",
+      text: `Hi ${body.name},\n\nThanks for getting in touch! I've received your message and will get back to you as soon as I can.\n\nBest,\nDaniel`,
+      html: `<p>Hi ${body.name},</p><p>Thanks for getting in touch! I've received your message and will get back to you as soon as I can.</p><p>Best,<br/>Daniel</p>`,
+    };
+
+    await Promise.all([
+      transporter.sendMail(notification),
+      transporter.sendMail(autoReply),
+    ]);
 
     return NextResponse.json({ ok: true });
   } catch (err: any) {
