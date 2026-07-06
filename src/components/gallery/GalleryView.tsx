@@ -4,16 +4,11 @@ import { gallery } from "@/resources";
 import { MasonryGrid, Media } from "@once-ui-system/core";
 
 export default function GalleryView() {
-  const proworkflow = gallery.projects.find(
-    (p) => p.title.toLowerCase() === "proworkflow",
-  );
-  const ui = gallery.projects.find(
-    (p) => p.title.toLowerCase() === "urban intelligence",
-  );
+  const proworkflow = gallery.projects.find((p) => p.title.toLowerCase() === "proworkflow");
+  const ui = gallery.projects.find((p) => p.title.toLowerCase() === "urban intelligence");
   const additionalProjects = gallery.projects.filter(
     (p) =>
-      p.title.toLowerCase() !== "proworkflow" &&
-      p.title.toLowerCase() !== "urban intelligence",
+      p.title.toLowerCase() !== "proworkflow" && p.title.toLowerCase() !== "urban intelligence",
   );
 
   return (

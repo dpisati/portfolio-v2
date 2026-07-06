@@ -11,7 +11,7 @@ import {
   Column,
   Flex,
   Meta,
-npm run   Opacity,
+  Opacity,
   RevealFx,
   SpacingToken,
 } from "@once-ui-system/core";
@@ -41,7 +41,7 @@ export default async function RootLayout({
         fonts.heading.variable,
         fonts.body.variable,
         fonts.label.variable,
-        fonts.code.variable
+        fonts.code.variable,
       )}
     >
       <head>

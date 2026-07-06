@@ -28,9 +28,7 @@ const initialState: FormState = { name: "", email: "", message: "" };
 export function ContactForm({ ...flex }: ContactFormProps) {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<FormState>>({});
-  const [status, setStatus] = useState<
-    "idle" | "submitting" | "success" | "error"
-  >("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [serverMessage, setServerMessage] = useState<string>("");
 
   const validate = (field?: keyof FormState): boolean => {
@@ -38,28 +36,21 @@ export function ContactForm({ ...flex }: ContactFormProps) {
 
     const check = (key: keyof FormState, value: string) => {
       if (key === "name") {
-        nextErrors.name =
-          value.trim().length === 0 ? "Name is required" : undefined;
+        nextErrors.name = value.trim().length === 0 ? "Name is required" : undefined;
       }
       if (key === "email") {
         if (!value) nextErrors.email = "Email is required";
-        else if (!/^([^\s@]+)@([^\s@]+)\.[^\s@]+$/.test(value))
-          nextErrors.email = "Invalid email";
+        else if (!/^([^\s@]+)@([^\s@]+)\.[^\s@]+$/.test(value)) nextErrors.email = "Invalid email";
         else nextErrors.email = undefined;
       }
       if (key === "message") {
         nextErrors.message =
-          value.trim().length < 10
-            ? "Message must be at least 10 characters"
-            : undefined;
+          value.trim().length < 10 ? "Message must be at least 10 characters" : undefined;
       }
     };
 
     if (field) check(field, form[field]);
-    else
-      (Object.keys(form) as (keyof FormState)[]).forEach((k) =>
-        check(k, form[k]),
-      );
+    else (Object.keys(form) as (keyof FormState)[]).forEach((k) => check(k, form[k]));
 
     setErrors(nextErrors);
     return Object.values(nextErrors).every((v) => !v);
@@ -153,12 +144,7 @@ export function ContactForm({ ...flex }: ContactFormProps) {
         <Heading marginBottom="s" variant="display-strong-xs">
           Contact Me
         </Heading>
-        <Text
-          wrap="balance"
-          marginBottom="l"
-          variant="body-default-l"
-          onBackground="neutral-weak"
-        >
+        <Text wrap="balance" marginBottom="l" variant="body-default-l" onBackground="neutral-weak">
           Got a question or just want to say hi? <br />
           Drop a message below and let's chat!
         </Text>
@@ -198,9 +184,7 @@ export function ContactForm({ ...flex }: ContactFormProps) {
             errorMessage={errors.message}
           />
           {serverMessage && (
-            <Text
-              onBackground={status === "error" ? "danger-weak" : "success-weak"}
-            >
+            <Text onBackground={status === "error" ? "danger-weak" : "success-weak"}>
               {serverMessage}
             </Text>
           )}

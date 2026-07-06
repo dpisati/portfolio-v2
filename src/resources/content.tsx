@@ -1,14 +1,5 @@
 import { mappedCareerHistory } from "@/resources/career-history";
-import {
-  About,
-  Blog,
-  Gallery,
-  Home,
-  Newsletter,
-  Person,
-  Social,
-  Work,
-} from "@/types";
+import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -70,16 +61,15 @@ const home: Home = {
   },
   subline: (
     <>
-      Passionate about creating intuitive user experiences <br /> and delivering
-      with meticulous attention to detail.
+      Passionate about creating intuitive user experiences <br /> and delivering with meticulous
+      attention to detail.
     </>
   ),
   quickPitch: (
     <>
-      I'm an easy-going, collaborative product creator with a formal
-      background in design and a passion for modern front-end engineering. I
-      don't just implement layouts — I focus on the product decisions,
-      business goals, and UX practices that drive real customer value.
+      I'm an easy-going, collaborative product creator with a formal background in design and a
+      passion for modern front-end engineering. I don't just implement layouts — I focus on the
+      product decisions, business goals, and UX practices that drive real customer value.
     </>
   ),
   philosophy: {
@@ -91,10 +81,9 @@ const home: Home = {
         title: "Design-to-code synergy",
         description: (
           <>
-            A strong foot in both creative and development worlds means zero
-            friction during engineering handoffs. I design with code
-            constraints in mind and build with an uncompromising eye for
-            pixel-perfection, interaction design, and fluid transitions.
+            A strong foot in both creative and development worlds means zero friction during
+            engineering handoffs. I design with code constraints in mind and build with an
+            uncompromising eye for pixel-perfection, interaction design, and fluid transitions.
           </>
         ),
       },
@@ -103,10 +92,9 @@ const home: Home = {
         title: "Smart AI & tooling integration",
         description: (
           <>
-            I embrace new technology paradigms, leaning on AI tools to
-            delegate repetitive, boilerplate work so I can focus my energy on
-            high-leverage decisions: complex UX flows, performance, and
-            features that actually matter to users.
+            I embrace new technology paradigms, leaning on AI tools to delegate repetitive,
+            boilerplate work so I can focus my energy on high-leverage decisions: complex UX flows,
+            performance, and features that actually matter to users.
           </>
         ),
       },
@@ -115,10 +103,9 @@ const home: Home = {
         title: "Radical flexibility",
         description: (
           <>
-            Startups and modern product teams move fast. I pivot between
-            shifting priorities and changing routes without losing momentum,
-            keeping the big picture in view to deliver value where the team
-            needs it most.
+            Startups and modern product teams move fast. I pivot between shifting priorities and
+            changing routes without losing momentum, keeping the big picture in view to deliver
+            value where the team needs it most.
           </>
         ),
       },
@@ -131,12 +118,7 @@ const home: Home = {
       {
         icon: "figma",
         title: "Design & UX",
-        items: [
-          "UI/UX Design",
-          "Prototyping (Figma)",
-          "Design Systems",
-          "User-Centric Research",
-        ],
+        items: ["UI/UX Design", "Prototyping (Figma)", "Design Systems", "User-Centric Research"],
       },
       {
         icon: "nextjs",
@@ -169,8 +151,8 @@ const home: Home = {
         title: "Lifelong student",
         description: (
           <>
-            I love sharing my knowledge with teammates and actively listening
-            to diverse perspectives — true growth is a collective effort.
+            I love sharing my knowledge with teammates and actively listening to diverse
+            perspectives — true growth is a collective effort.
           </>
         ),
       },
@@ -179,9 +161,8 @@ const home: Home = {
         title: "The Swiss Army knife",
         description: (
           <>
-            Beyond coding and wireframes, I'm eager to jump into marketing
-            assets, custom illustrations, or strategic product discussions —
-            wherever I can add value.
+            Beyond coding and wireframes, I'm eager to jump into marketing assets, custom
+            illustrations, or strategic product discussions — wherever I can add value.
           </>
         ),
       },
@@ -190,8 +171,8 @@ const home: Home = {
         title: "Customer-obsessed",
         description: (
           <>
-            Every line of code or visual element I create passes through one
-            filter: how does this make the user's life easier or better?
+            Every line of code or visual element I create passes through one filter: how does this
+            make the user's life easier or better?
           </>
         ),
       },
@@ -220,15 +201,13 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I’m a designer-turned-developer who loves the space where 'how it looks'
-        meets 'how it works.' With over a decade in design and the last 4 years
-        focused on code, I’ve learned that the best digital tools aren't just
-        pretty—they’re built on solid systems that make life easier for both
-        users and developers. I’m a big fan of pixel-perfection, but I’m even
-        more passionate about being the bridge between creative ideas and
-        technical reality. Whether I’m tinkering in Figma or building out
-        components in React, my goal is always the same: to create something
-        useful, scalable, and intuitive.
+        I’m a designer-turned-developer who loves the space where 'how it looks' meets 'how it
+        works.' With over a decade in design and the last 4 years focused on code, I’ve learned that
+        the best digital tools aren't just pretty—they’re built on solid systems that make life
+        easier for both users and developers. I’m a big fan of pixel-perfection, but I’m even more
+        passionate about being the bridge between creative ideas and technical reality. Whether I’m
+        tinkering in Figma or building out components in React, my goal is always the same: to
+        create something useful, scalable, and intuitive.
       </>
     ),
   },
@@ -249,20 +228,15 @@ const about: About = {
         name: "UX Design Certificate",
         description: (
           <>
-            Google. Completed seven-course program covering full UX process:
-            user research, defining pain points, ideation, wireframes,
-            prototyping, usability testing, and iterative refinement (2023).
+            Google. Completed seven-course program covering full UX process: user research, defining
+            pain points, ideation, wireframes, prototyping, usability testing, and iterative
+            refinement (2023).
           </>
         ),
       },
       {
         name: "Fullstack Development Certification",
-        description: (
-          <>
-            Rocketseat – Fullstack Development (2022) - React / Node /
-            TypeScript.
-          </>
-        ),
+        description: <>Rocketseat – Fullstack Development (2022) - React / Node / TypeScript.</>,
       },
       // {
       //   name: "Skynet – Inventor Assembly & Machine Design (2011)",

@@ -64,10 +64,10 @@ export default function Work() {
         {work.title}
       </Heading>
       <Text as="div" variant="body-default-l" align="center">
-        I love the challenge of taking a complex problem and turning it into
-        something simple. <br />
-        These 'Before & After' snapshots show my process of bridging the gap
-        between messy legacy systems and polished, component-based interfaces.
+        I love the challenge of taking a complex problem and turning it into something simple.{" "}
+        <br />
+        These 'Before & After' snapshots show my process of bridging the gap between messy legacy
+        systems and polished, component-based interfaces.
       </Text>
       {/* <Heading
         as="h2"
@@ -83,13 +83,7 @@ export default function Work() {
           <WorkExperienceCard key={exp.slug} experience={exp} />
         ))}
       </Row> */}
-      <Heading
-        as="h2"
-        variant="heading-strong-l"
-        marginTop="l"
-        marginBottom="40"
-        align="center"
-      >
+      <Heading as="h2" variant="heading-strong-l" marginTop="l" marginBottom="40" align="center">
         Before & After
       </Heading>
       <Column gap="160">

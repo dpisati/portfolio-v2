@@ -67,13 +67,7 @@ export default function Home() {
               </Badge>
             </RevealFx>
           )}
-          <RevealFx
-            translateY="4"
-            fillWidth
-            horizontal="center"
-            paddingBottom="16"
-            paddingTop="64"
-          >
+          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16" paddingTop="64">
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
             </Heading>
@@ -86,37 +80,18 @@ export default function Home() {
             paddingTop="20"
             paddingBottom="32"
           >
-            <Text
-              wrap="balance"
-              onBackground="neutral-weak"
-              variant="heading-default-xl"
-            >
+            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
               {home.subline}
             </Text>
           </RevealFx>
           {home.quickPitch && (
-            <RevealFx
-              translateY="8"
-              delay={0.3}
-              fillWidth
-              horizontal="center"
-              paddingBottom="24"
-            >
-              <Text
-                wrap="balance"
-                onBackground="neutral-weak"
-                variant="body-default-l"
-              >
+            <RevealFx translateY="8" delay={0.3} fillWidth horizontal="center" paddingBottom="24">
+              <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
                 {home.quickPitch}
               </Text>
             </RevealFx>
           )}
-          <RevealFx
-            paddingTop="12"
-            delay={0.5}
-            horizontal="center"
-            paddingLeft="12"
-          >
+          <RevealFx paddingTop="12" delay={0.5} horizontal="center" paddingLeft="12">
             <Button
               id="about"
               data-border="rounded"
@@ -152,13 +127,7 @@ export default function Home() {
                 {home.philosophy.title}
               </Heading>
             </RevealFx>
-            <Row
-              fillWidth
-              gap="24"
-              wrap
-              paddingTop="24"
-              s={{ direction: "column" }}
-            >
+            <Row fillWidth gap="24" wrap paddingTop="24" s={{ direction: "column" }}>
               {home.philosophy.items.map((item, index) => (
                 <RevealFx
                   key={item.title}
@@ -198,13 +167,7 @@ export default function Home() {
                 {home.toolkit.title}
               </Heading>
             </RevealFx>
-            <Row
-              fillWidth
-              gap="24"
-              wrap
-              paddingTop="24"
-              s={{ direction: "column" }}
-            >
+            <Row fillWidth gap="24" wrap paddingTop="24" s={{ direction: "column" }}>
               {home.toolkit.categories.map((category, index) => (
                 <RevealFx
                   key={category.title}
@@ -213,13 +176,7 @@ export default function Home() {
                   flex={1}
                   style={{ minWidth: "240px" }}
                 >
-                  <Column
-                    fillWidth
-                    gap="16"
-                    padding="24"
-                    radius="l"
-                    border="neutral-alpha-weak"
-                  >
+                  <Column fillWidth gap="16" padding="24" radius="l" border="neutral-alpha-weak">
                     <Row gap="8" vertical="center">
                       <Icon name={category.icon} onBackground="brand-medium" />
                       <Text variant="heading-strong-m">{category.title}</Text>
@@ -249,19 +206,9 @@ export default function Home() {
                 {home.collaboration.title}
               </Heading>
             </RevealFx>
-            <Column
-              fillWidth
-              maxWidth="s"
-              gap="20"
-              paddingTop="24"
-            >
+            <Column fillWidth maxWidth="s" gap="20" paddingTop="24">
               {home.collaboration.items.map((item, index) => (
-                <RevealFx
-                  key={item.title}
-                  translateY="12"
-                  delay={0.1 * (index + 1)}
-                  fillWidth
-                >
+                <RevealFx key={item.title} translateY="12" delay={0.1 * (index + 1)} fillWidth>
                   <Row fillWidth gap="16">
                     <Icon name={item.icon} onBackground="brand-medium" size="m" />
                     <Column gap="4">

@@ -1,11 +1,4 @@
-import {
-  Column,
-  Heading,
-  Media,
-  Row,
-  SmartLink,
-  Text,
-} from "@once-ui-system/core";
+import { Column, Heading, Media, Row, SmartLink, Text } from "@once-ui-system/core";
 import React from "react";
 // Using the lightweight mapped structure from workExperience export
 interface SimpleExperience {
@@ -20,14 +13,9 @@ interface WorkExperienceCardProps {
   experience: SimpleExperience;
 }
 
-export const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
-  experience,
-}) => {
+export const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({ experience }) => {
   return (
-    <SmartLink
-      href={`/work/${experience.slug}`}
-      style={{ textDecoration: "none" }}
-    >
+    <SmartLink href={`/work/${experience.slug}`} style={{ textDecoration: "none" }}>
       <Column
         gap="12"
         padding="16"
