@@ -39,8 +39,7 @@ export async function generateMetadata({
   let post = posts.find((post) => post.slug === slugPath);
   // Find rich experience entry from careerHistory (fallback to simplified mapping if needed)
   const fullExperience = careerHistory.find((e) => e.slug === slugPath);
-  const experience =
-    fullExperience || workExperience.find((e) => e.slug === slugPath);
+  const experience = fullExperience || workExperience.find((e) => e.slug === slugPath);
 
   if (!post && !experience) return {};
 
@@ -49,8 +48,7 @@ export async function generateMetadata({
       title: post.metadata.title,
       description: post.metadata.summary,
       baseURL: baseURL,
-      image:
-        post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
+      image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
       path: `${work.path}/${post.slug}`,
     });
   }
@@ -88,8 +86,7 @@ export default async function Project({
   const posts = getPosts(["src", "app", "work", "projects"]);
   let post = posts.find((post) => post.slug === slugPath);
   const fullExperience = careerHistory.find((e) => e.slug === slugPath);
-  const experience =
-    fullExperience || workExperience.find((e) => e.slug === slugPath);
+  const experience = fullExperience || workExperience.find((e) => e.slug === slugPath);
 
   if (!post && !experience) {
     notFound();
@@ -142,28 +139,18 @@ export default async function Project({
           <Text variant="label-strong-m">{post ? "Projects" : "Work"}</Text>
         </SmartLink>
         {post && (
-          <Text
-            variant="body-default-xs"
-            onBackground="neutral-weak"
-            marginBottom="12"
-          >
+          <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
             {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
           </Text>
         )}
         <Heading variant="display-strong-m">
-          {post
-            ? post.metadata.title
-            : fullExperience
-            ? fullExperience.company
-            : experience!.title}
+          {post ? post.metadata.title : fullExperience ? fullExperience.company : experience!.title}
         </Heading>
       </Column>
       {post && (
         <Row marginBottom="32" horizontal="center">
           <Row gap="16" vertical="center">
-            {post.metadata.team && (
-              <AvatarGroup reverse avatars={avatars} size="s" />
-            )}
+            {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="s" />}
             <Text variant="label-default-m" onBackground="brand-weak">
               {post.metadata.team?.map(
                 (member: { name: string; linkedIn: string }, idx: number) => (
@@ -175,7 +162,7 @@ export default async function Project({
                     )}
                     <SmartLink href={member.linkedIn}>{member.name}</SmartLink>
                   </span>
-                )
+                ),
               )}
             </Text>
           </Row>
@@ -232,57 +219,55 @@ export default async function Project({
               </Row>
             </>
           )}
-          {fullExperience.beforeAfter &&
-            fullExperience.beforeAfter.length > 0 && (
-              <Column gap="24">
-                <Heading as="h3" variant="heading-strong-xs">
-                  Before & After
-                </Heading>
-                <Column gap="40">
-                  {fullExperience.beforeAfter.map((ba, i) => (
-                    <Column key={i} gap="8">
-                      <Text variant="label-strong-s">{ba.description}</Text>
-                      <BeforeAndAfter
-                        before={{
-                          src: ba.before,
-                          alt: ba.description + " before",
-                          label: "Before",
-                        }}
-                        after={{
-                          src: ba.after,
-                          alt: ba.description + " after",
-                          label: "After",
-                        }}
-                        aspectRatio="16 / 9"
-                        frame
-                        initial={50}
-                        hover
-                      />
-                    </Column>
-                  ))}
-                </Column>
-              </Column>
-            )}
-          {fullExperience.marketingImgs &&
-            fullExperience.marketingImgs.length > 0 && (
-              <Column gap="24">
-                <Heading as="h3" variant="heading-strong-xs">
-                  Marketing
-                </Heading>
-                <Row wrap gap="16">
-                  {fullExperience.marketingImgs.map((img, i) => (
-                    <Media
-                      key={i}
-                      as="img"
-                      radius="s"
+          {fullExperience.beforeAfter && fullExperience.beforeAfter.length > 0 && (
+            <Column gap="24">
+              <Heading as="h3" variant="heading-strong-xs">
+                Before & After
+              </Heading>
+              <Column gap="40">
+                {fullExperience.beforeAfter.map((ba, i) => (
+                  <Column key={i} gap="8">
+                    <Text variant="label-strong-s">{ba.description}</Text>
+                    <BeforeAndAfter
+                      before={{
+                        src: ba.before,
+                        alt: ba.description + " before",
+                        label: "Before",
+                      }}
+                      after={{
+                        src: ba.after,
+                        alt: ba.description + " after",
+                        label: "After",
+                      }}
                       aspectRatio="16 / 9"
-                      alt="marketing image"
-                      src={img}
+                      frame
+                      initial={50}
+                      hover
                     />
-                  ))}
-                </Row>
+                  </Column>
+                ))}
               </Column>
-            )}
+            </Column>
+          )}
+          {fullExperience.marketingImgs && fullExperience.marketingImgs.length > 0 && (
+            <Column gap="24">
+              <Heading as="h3" variant="heading-strong-xs">
+                Marketing
+              </Heading>
+              <Row wrap gap="16">
+                {fullExperience.marketingImgs.map((img, i) => (
+                  <Media
+                    key={i}
+                    as="img"
+                    radius="s"
+                    aspectRatio="16 / 9"
+                    alt="marketing image"
+                    src={img}
+                  />
+                ))}
+              </Row>
+            </Column>
+          )}
         </Column>
       )}
       <ScrollToHash />

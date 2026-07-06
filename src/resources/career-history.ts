@@ -30,15 +30,7 @@ export const careerHistory: LegacyCareerEntry[] = [
     title: "UX Designer and Frontend Developer",
     description:
       "I joined the team to help lead the design and frontend efforts for their next generation of project management tools. It’s been a fun challenge—I get to jump between Figma mockups to validate ideas with the team, and then hop into the codebase to make sure those designs come to life exactly as intended.",
-    tools: [
-      "react",
-      "typescript",
-      "graphql",
-      "material-ui",
-      "tailwind",
-      "playwright",
-      "figma",
-    ],
+    tools: ["react", "typescript", "graphql", "material-ui", "tailwind", "playwright", "figma"],
     url: "https://proworkflow.com/",
     color: "#FF5733",
     mainImg: "/assets/images/proworkflow-main.png",
@@ -115,11 +107,7 @@ export const careerHistory: LegacyCareerEntry[] = [
     url: "https://www.urbanintelligence.co.nz/",
     color: "#336791",
     mainImg: "/assets/images/ui-main.png",
-    images: [
-      "/assets/images/ui-1.png",
-      "/assets/images/ui-2.png",
-      "/assets/images/ui-3.png",
-    ],
+    images: ["/assets/images/ui-1.png", "/assets/images/ui-2.png", "/assets/images/ui-3.png"],
     beforeAfter: [
       {
         before: "/assets/images/before-after/ui/01_B.png",
@@ -158,15 +146,7 @@ export const careerHistory: LegacyCareerEntry[] = [
     title: "Software Developer",
     description:
       "Working in a fast-paced Agile environment, I helped build micro-frontend apps for over 30,000 users. My focus was on turning complex data into easy-to-read charts and dashboards. It was a great lesson in how to collaborate closely with product owners and other devs to keep a massive platform running smoothly.",
-    tools: [
-      "react",
-      "typescript",
-      "redux",
-      "material-ui",
-      "emotion-css",
-      "storybook",
-      "jest",
-    ],
+    tools: ["react", "typescript", "redux", "material-ui", "emotion-css", "storybook", "jest"],
     url: "https://www.phocassoftware.com/",
     color: "#07b8d6",
     mainImg: "/assets/images/phocas-main.png",
@@ -255,11 +235,7 @@ export const careerHistory: LegacyCareerEntry[] = [
     url: "https://www.intable.com.br/",
     color: "#f58634",
     mainImg: "/assets/images/promob-main.png",
-    images: [
-      "/assets/images/ui-1.png",
-      "/assets/images/ui-2.png",
-      "/assets/images/ui-3.png",
-    ],
+    images: ["/assets/images/ui-1.png", "/assets/images/ui-2.png", "/assets/images/ui-3.png"],
   },
   {
     slug: "aecom",

@@ -39,9 +39,7 @@ export const BeforeAndAfter: React.FC<BeforeAndAfterProps> = ({
   ...rest
 }) => {
   const ref = React.useRef<HTMLDivElement | null>(null);
-  const [value, setValue] = React.useState(() =>
-    Math.min(HOVER_MAX, Math.max(HOVER_MIN, initial)),
-  );
+  const [value, setValue] = React.useState(() => Math.min(HOVER_MAX, Math.max(HOVER_MIN, initial)));
 
   const vertical = orientation === "vertical";
 
@@ -132,11 +130,7 @@ export const BeforeAndAfter: React.FC<BeforeAndAfterProps> = ({
   const comparisonCore = (
     <div
       ref={ref}
-      className={classNames(
-        styles.container,
-        vertical && styles.vertical,
-        className,
-      )}
+      className={classNames(styles.container, vertical && styles.vertical, className)}
       style={containerStyle}
       {...rest}
     >
@@ -153,16 +147,10 @@ export const BeforeAndAfter: React.FC<BeforeAndAfterProps> = ({
       </div>
       <div className={styles.overlay} aria-label={after.label || "After"}>
         <div className={styles.overlayContent} style={clipStyle}>
-          <img
-            src={after.src}
-            alt={after.alt || after.label || "After"}
-            draggable={false}
-          />
+          <img src={after.src} alt={after.alt || after.label || "After"} draggable={false} />
         </div>
         {after.label && (
-          <span className={classNames(styles.label, styles.after)}>
-            {after.label}
-          </span>
+          <span className={classNames(styles.label, styles.after)}>{after.label}</span>
         )}
       </div>
       <div className={styles.handleLineWrapper}>
@@ -186,9 +174,7 @@ export const BeforeAndAfter: React.FC<BeforeAndAfterProps> = ({
             <span />
             <span />
           </div>
-          {frameTitle && (
-            <div className={styles.appFrameTitle}>{frameTitle}</div>
-          )}
+          {frameTitle && <div className={styles.appFrameTitle}>{frameTitle}</div>}
           {frameUrl && <div className={styles.appFrameUrl}>{frameUrl}</div>}
         </div>
         <div className={styles.appFrameContent}>{comparisonCore}</div>

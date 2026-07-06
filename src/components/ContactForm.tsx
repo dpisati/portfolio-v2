@@ -7,7 +7,7 @@ import {
   Column,
   Heading,
   Input,
-  Opacity,
+  opacity as OpacityType,
   Row,
   SpacingToken,
   Text,
@@ -28,9 +28,7 @@ const initialState: FormState = { name: "", email: "", message: "" };
 export function ContactForm({ ...flex }: ContactFormProps) {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<FormState>>({});
-  const [status, setStatus] = useState<
-    "idle" | "submitting" | "success" | "error"
-  >("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [serverMessage, setServerMessage] = useState<string>("");
 
   const validate = (field?: keyof FormState): boolean => {
@@ -38,28 +36,21 @@ export function ContactForm({ ...flex }: ContactFormProps) {
 
     const check = (key: keyof FormState, value: string) => {
       if (key === "name") {
-        nextErrors.name =
-          value.trim().length === 0 ? "Name is required" : undefined;
+        nextErrors.name = value.trim().length === 0 ? "Name is required" : undefined;
       }
       if (key === "email") {
         if (!value) nextErrors.email = "Email is required";
-        else if (!/^([^\s@]+)@([^\s@]+)\.[^\s@]+$/.test(value))
-          nextErrors.email = "Invalid email";
+        else if (!/^([^\s@]+)@([^\s@]+)\.[^\s@]+$/.test(value)) nextErrors.email = "Invalid email";
         else nextErrors.email = undefined;
       }
       if (key === "message") {
         nextErrors.message =
-          value.trim().length < 10
-            ? "Message must be at least 10 characters"
-            : undefined;
+          value.trim().length < 10 ? "Message must be at least 10 characters" : undefined;
       }
     };
 
     if (field) check(field, form[field]);
-    else
-      (Object.keys(form) as (keyof FormState)[]).forEach((k) =>
-        check(k, form[k]),
-      );
+    else (Object.keys(form) as (keyof FormState)[]).forEach((k) => check(k, form[k]));
 
     setErrors(nextErrors);
     return Object.values(nextErrors).every((v) => !v);
@@ -100,7 +91,7 @@ export function ContactForm({ ...flex }: ContactFormProps) {
       fillWidth
       padding="xl"
       radius="l"
-      marginBottom="m"
+      marginBottom="80"
       horizontal="center"
       align="center"
       background="surface"
@@ -118,7 +109,7 @@ export function ContactForm({ ...flex }: ContactFormProps) {
         }}
         gradient={{
           display: mailchimp.effects.gradient.display,
-          opacity: mailchimp.effects.gradient.opacity as Opacity,
+          opacity: mailchimp.effects.gradient.opacity as OpacityType,
           x: mailchimp.effects.gradient.x,
           y: mailchimp.effects.gradient.y,
           width: mailchimp.effects.gradient.width,
@@ -129,20 +120,20 @@ export function ContactForm({ ...flex }: ContactFormProps) {
         }}
         dots={{
           display: mailchimp.effects.dots.display,
-          opacity: mailchimp.effects.dots.opacity as Opacity,
+          opacity: mailchimp.effects.dots.opacity as OpacityType,
           size: mailchimp.effects.dots.size as SpacingToken,
           color: mailchimp.effects.dots.color,
         }}
         grid={{
           display: mailchimp.effects.grid.display,
-          opacity: mailchimp.effects.grid.opacity as Opacity,
+          opacity: mailchimp.effects.grid.opacity as OpacityType,
           color: mailchimp.effects.grid.color,
           width: mailchimp.effects.grid.width,
           height: mailchimp.effects.grid.height,
         }}
         lines={{
           display: mailchimp.effects.lines.display,
-          opacity: mailchimp.effects.lines.opacity as Opacity,
+          opacity: mailchimp.effects.lines.opacity as OpacityType,
           size: mailchimp.effects.lines.size as SpacingToken,
           thickness: mailchimp.effects.lines.thickness,
           angle: mailchimp.effects.lines.angle,
@@ -153,12 +144,7 @@ export function ContactForm({ ...flex }: ContactFormProps) {
         <Heading marginBottom="s" variant="display-strong-xs">
           Contact Me
         </Heading>
-        <Text
-          wrap="balance"
-          marginBottom="l"
-          variant="body-default-l"
-          onBackground="neutral-weak"
-        >
+        <Text wrap="balance" marginBottom="l" variant="body-default-l" onBackground="neutral-weak">
           Got a question or just want to say hi? <br />
           Drop a message below and let's chat!
         </Text>
@@ -198,9 +184,7 @@ export function ContactForm({ ...flex }: ContactFormProps) {
             errorMessage={errors.message}
           />
           {serverMessage && (
-            <Text
-              onBackground={status === "error" ? "danger-weak" : "success-weak"}
-            >
+            <Text onBackground={status === "error" ? "danger-weak" : "success-weak"}>
               {serverMessage}
             </Text>
           )}

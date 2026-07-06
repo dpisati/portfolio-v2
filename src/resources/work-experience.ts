@@ -26,15 +26,7 @@ export const careerHistory: CareerHistoryEntry[] = [
     title: "UX Designer and Frontend Developer",
     description:
       "I joined Proworkflow to lead the design and actively contribute to the frontend development of their new Project Management, Time Tracker, Quote, and Invoice web and mobile apps. My role involved creating mockups from scratch to validate designs with decision-makers, as well as working hands-on with the frontend team to implement the designs, ensuring a pixel-perfect implementation.",
-    tools: [
-      "react",
-      "typescript",
-      "graphql",
-      "material-ui",
-      "tailwind",
-      "playwright",
-      "figma",
-    ],
+    tools: ["react", "typescript", "graphql", "material-ui", "tailwind", "playwright", "figma"],
     url: "https://proworkflow.com/",
     color: "#FF5733",
     mainImg: "/images/projects/proworkflow-main.png",
@@ -111,11 +103,7 @@ export const careerHistory: CareerHistoryEntry[] = [
     url: "https://www.urbanintelligence.co.nz/",
     color: "#336791",
     mainImg: "/images/projects/ui-main.png",
-    images: [
-      "/images/projects/ui-1.png",
-      "/images/projects/ui-2.png",
-      "/images/projects/ui-3.png",
-    ],
+    images: ["/images/projects/ui-1.png", "/images/projects/ui-2.png", "/images/projects/ui-3.png"],
     beforeAfter: [
       {
         before: "/images/projects/before-after/ui/01_B.png",
@@ -154,15 +142,7 @@ export const careerHistory: CareerHistoryEntry[] = [
     title: "Software Developer",
     description:
       "In my role as a front-end developer, I wholeheartedly adopted the Agile methodology to translate designs into dynamic micro front-end applications catering to over 30,000 users. These applications aimed to enhance business insights through interactive dashboards and charts. My work involved close collaboration with development managers, product owners, designers, and fellow developers at every stage of the development process.",
-    tools: [
-      "react",
-      "typescript",
-      "redux",
-      "material-ui",
-      "emotion-css",
-      "storybook",
-      "jest",
-    ],
+    tools: ["react", "typescript", "redux", "material-ui", "emotion-css", "storybook", "jest"],
     url: "https://www.phocassoftware.com/",
     color: "#07b8d6",
     mainImg: "/images/projects/phocas-main.png",

@@ -39,8 +39,7 @@ export async function POST(req: Request) {
       } else if (entry.count >= MESSAGE_LIMIT) {
         return NextResponse.json(
           {
-            error:
-              "You have reached the message limit. Please try again later.",
+            error: "You have reached the message limit. Please try again later.",
           },
           { status: 429 },
         );
@@ -72,10 +71,7 @@ export async function POST(req: Request) {
       !CONTACT_SMTP_PASS ||
       !CONTACT_TO
     ) {
-      return NextResponse.json(
-        { error: "Server email configuration missing" },
-        { status: 500 },
-      );
+      return NextResponse.json({ error: "Server email configuration missing" }, { status: 500 });
     }
 
     const transporter = nodemailer.createTransport({
@@ -96,9 +92,7 @@ export async function POST(req: Request) {
       replyTo: body.email,
       subject: `Portfolio Contact: ${body.name}`,
       text: body.message,
-      html: `<p><strong>Name:</strong> ${
-        body.name
-      }</p><p><strong>Email:</strong> ${
+      html: `<p><strong>Name:</strong> ${body.name}</p><p><strong>Email:</strong> ${
         body.email
       }</p><p>${body.message?.replace(/\n/g, "<br/>")}</p>`,
     };
@@ -111,16 +105,10 @@ export async function POST(req: Request) {
       html: `<p>Hi ${body.name},</p><p>Thanks for getting in touch! I've received your message and will get back to you as soon as I can.</p><p>Best,<br/>Daniel</p>`,
     };
 
-    await Promise.all([
-      transporter.sendMail(notification),
-      transporter.sendMail(autoReply),
-    ]);
+    await Promise.all([transporter.sendMail(notification), transporter.sendMail(autoReply)]);
 
     return NextResponse.json({ ok: true });
   } catch (err: any) {
-    return NextResponse.json(
-      { error: "Failed to send message" },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
   }
 }
