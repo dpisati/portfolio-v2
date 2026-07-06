@@ -91,7 +91,7 @@ export function ContactForm({ ...flex }: ContactFormProps) {
       fillWidth
       padding="xl"
       radius="l"
-      marginBottom="m"
+      marginBottom="80"
       horizontal="center"
       align="center"
       background="surface"
