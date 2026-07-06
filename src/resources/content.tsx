@@ -89,7 +89,7 @@ const home: Home = {
       },
       {
         icon: "rocket",
-        title: "Smart AI & tooling integration",
+        title: "AI & tooling integration",
         description: (
           <>
             I embrace new technology paradigms, leaning on AI tools to delegate repetitive,
@@ -127,17 +127,17 @@ const home: Home = {
           "TypeScript / JavaScript",
           "React / Next.js",
           "HTML5 / CSS3 / SASS",
-          "Node.js Ecosystem",
+          "Tailwind / Shadcn UI / Material UI",
         ],
       },
       {
         icon: "grid",
         title: "Cross-Team Contribution",
         items: [
-          "Product Marketing Strategy",
-          "Custom Illustration",
+          "Product Strategy",
+          "Marketing Collaterals",
           "Brand & Asset Design",
-          "Open Source Collaboration",
+          "Custom Illustrations",
         ],
       },
     ],
@@ -251,6 +251,7 @@ const about: About = {
       { title: "HTML", src: "/images/icons/html.png" },
       { title: "CSS", src: "/images/icons/css.png" },
       { title: "SASS", src: "/images/icons/sass.png" },
+      { title: "Tailwind", src: "/images/icons/tailwind.png" },
       { title: "Emotion CSS", src: "/images/icons/emotion.png" },
       { title: "Material UI", src: "/images/icons/mui.png" },
       { title: "React", src: "/images/icons/react.png" },
