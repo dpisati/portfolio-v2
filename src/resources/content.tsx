@@ -74,6 +74,129 @@ const home: Home = {
       with meticulous attention to detail.
     </>
   ),
+  quickPitch: (
+    <>
+      I'm an easy-going, collaborative product creator with a formal
+      background in design and a passion for modern front-end engineering. I
+      don't just implement layouts — I focus on the product decisions,
+      business goals, and UX practices that drive real customer value.
+    </>
+  ),
+  philosophy: {
+    display: true,
+    title: "How I think",
+    items: [
+      {
+        icon: "figma",
+        title: "Design-to-code synergy",
+        description: (
+          <>
+            A strong foot in both creative and development worlds means zero
+            friction during engineering handoffs. I design with code
+            constraints in mind and build with an uncompromising eye for
+            pixel-perfection, interaction design, and fluid transitions.
+          </>
+        ),
+      },
+      {
+        icon: "rocket",
+        title: "Smart AI & tooling integration",
+        description: (
+          <>
+            I embrace new technology paradigms, leaning on AI tools to
+            delegate repetitive, boilerplate work so I can focus my energy on
+            high-leverage decisions: complex UX flows, performance, and
+            features that actually matter to users.
+          </>
+        ),
+      },
+      {
+        icon: "globe",
+        title: "Radical flexibility",
+        description: (
+          <>
+            Startups and modern product teams move fast. I pivot between
+            shifting priorities and changing routes without losing momentum,
+            keeping the big picture in view to deliver value where the team
+            needs it most.
+          </>
+        ),
+      },
+    ],
+  },
+  toolkit: {
+    display: true,
+    title: "Toolkit & multidisciplinary impact",
+    categories: [
+      {
+        icon: "figma",
+        title: "Design & UX",
+        items: [
+          "UI/UX Design",
+          "Prototyping (Figma)",
+          "Design Systems",
+          "User-Centric Research",
+        ],
+      },
+      {
+        icon: "nextjs",
+        title: "Frontend Engineering",
+        items: [
+          "TypeScript / JavaScript",
+          "React / Next.js",
+          "HTML5 / CSS3 / SASS",
+          "Node.js Ecosystem",
+        ],
+      },
+      {
+        icon: "grid",
+        title: "Cross-Team Contribution",
+        items: [
+          "Product Marketing Strategy",
+          "Custom Illustration",
+          "Brand & Asset Design",
+          "Open Source Collaboration",
+        ],
+      },
+    ],
+  },
+  collaboration: {
+    display: true,
+    title: "How I work with teams",
+    items: [
+      {
+        icon: "book",
+        title: "Lifelong student",
+        description: (
+          <>
+            I love sharing my knowledge with teammates and actively listening
+            to diverse perspectives — true growth is a collective effort.
+          </>
+        ),
+      },
+      {
+        icon: "document",
+        title: "The Swiss Army knife",
+        description: (
+          <>
+            Beyond coding and wireframes, I'm eager to jump into marketing
+            assets, custom illustrations, or strategic product discussions —
+            wherever I can add value.
+          </>
+        ),
+      },
+      {
+        icon: "person",
+        title: "Customer-obsessed",
+        description: (
+          <>
+            Every line of code or visual element I create passes through one
+            filter: how does this make the user's life easier or better?
+          </>
+        ),
+      },
+    ],
+  },
 };
 
 const about: About = {

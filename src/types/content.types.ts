@@ -99,6 +99,38 @@ export interface Home extends BasePageConfig {
   };
   /** The sub text which appears below the headline */
   subline: React.ReactNode;
+  /** Short expanded pitch shown below the subline */
+  quickPitch?: React.ReactNode;
+  /** Core working principles, shown as a row of feature cards */
+  philosophy?: {
+    display: boolean;
+    title: string;
+    items: Array<{
+      icon: IconName;
+      title: string;
+      description: React.ReactNode;
+    }>;
+  };
+  /** Multidisciplinary toolkit, grouped by category */
+  toolkit?: {
+    display: boolean;
+    title: string;
+    categories: Array<{
+      icon: IconName;
+      title: string;
+      items: string[];
+    }>;
+  };
+  /** How the person works with teams */
+  collaboration?: {
+    display: boolean;
+    title: string;
+    items: Array<{
+      icon: IconName;
+      title: string;
+      description: React.ReactNode;
+    }>;
+  };
 }
 
 /**
