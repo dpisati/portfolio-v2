@@ -291,6 +291,177 @@ export const projects: Project[] = [
       "End-to-end ownership from Figma to a Node/Express + Postgres backend kept the data-to-UI flow smooth.",
     ],
   },
+  {
+    slug: "phocas",
+    title: "Phocas Software",
+    tagline: "Building data-rich micro-frontends for 30,000+ business users",
+    role: "Software Developer",
+    timeframe: "Oct 2021 – Mar 2023",
+    summary:
+      "Built micro-frontend applications in a fast-paced Agile team, turning complex business data into interactive dashboards and charts used by more than 30,000 people worldwide.",
+    coverImage: "/images/projects/phocas-main.png",
+    accentColor: "#07b8d6",
+    url: "https://www.phocassoftware.com/",
+    technologies: ["react", "typescript", "redux", "material-ui", "emotion-css", "storybook", "jest"],
+    designTools: [],
+    company: {
+      industry: "SaaS · Business Intelligence & Analytics",
+      about:
+        "Phocas Software builds business intelligence tools that help companies explore their data and make faster, more confident decisions through interactive dashboards and reporting.",
+      notable:
+        "Phocas serves thousands of customers across manufacturing, distribution and retail, and is consistently rated one of the highest-satisfaction BI platforms on the market.",
+    },
+    overview:
+      "Phocas was scaling a large business intelligence platform built from independently deployable micro-frontends. The work centred on translating designs into fast, reliable applications that surface business insights — interactive dashboards and charts — for a user base of more than 30,000 people, all within an Agile delivery process.",
+    objectives: [
+      "Ship features as independently deployable micro-frontends within a large, established platform.",
+      "Turn complex, high-volume data into dashboards and charts that stay fast and readable.",
+      "Collaborate closely across product, design and engineering at every stage of delivery.",
+      "Maintain quality and consistency across a codebase serving tens of thousands of users.",
+    ],
+    contributions: [
+      "Built and maintained micro-frontend applications serving over 30,000 users.",
+      "Translated designs into dynamic, data-driven dashboards and interactive charts.",
+      "Worked in a fast-paced Agile team alongside development managers, product owners, designers and fellow developers.",
+      "Contributed reusable components documented in Storybook and covered by Jest tests.",
+    ],
+    process: [
+      {
+        title: "Agile delivery",
+        description:
+          "Worked in short, iterative cycles with product owners and development managers, breaking large features into shippable increments.",
+      },
+      {
+        title: "Component-driven build",
+        description:
+          "Implemented UI as reusable React components documented in Storybook, keeping the micro-frontends consistent and testable.",
+      },
+      {
+        title: "Data visualisation",
+        description:
+          "Turned complex datasets into interactive dashboards and charts, tuning them for performance at scale.",
+      },
+    ],
+    outcomes: [
+      "Delivered dashboard and charting features used daily by a 30,000+ user base.",
+      "Reusable, Storybook-documented components kept the micro-frontend suite consistent.",
+      "Close cross-functional collaboration kept a large platform shipping smoothly in Agile cycles.",
+    ],
+  },
+  {
+    slug: "tripod-digital",
+    title: "Tripod Digital",
+    tagline: "Designing and building Mixr, an augmented-reality experience creator",
+    role: "Frontend Developer & UI/UX Designer",
+    timeframe: "Mar 2021 – Sep 2021",
+    summary:
+      "Designed and built Mixr, an AR experience creator — defining the design system and user flow in Figma, then shipping a frontend app powered by Firebase cloud functions.",
+    coverImage: "/images/projects/mixr.png",
+    accentColor: "#15aca3",
+    url: "https://tripod-digital.co.nz/",
+    technologies: ["react", "typescript", "sass", "firebase"],
+    designTools: ["figma"],
+    company: {
+      industry: "AR/VR · Immersive Experiences",
+      about:
+        "Tripod Digital builds augmented-reality experiences and the tools to create them, making immersive content approachable for teams without deep technical backgrounds.",
+    },
+    overview:
+      "Tripod Digital needed a creator tool that let people build augmented-reality experiences through a friendly web interface. Wearing both hats, I owned the design and the frontend build of Mixr — shaping the product's usability from the design system through to a working application backed by Firebase cloud functions.",
+    objectives: [
+      "Make creating augmented-reality experiences approachable through a clear web interface.",
+      "Define a design system and user flow that improve the product's usability.",
+      "Communicate features and functionality with interactive prototypes.",
+      "Ship a frontend that talks smoothly to a serverless Firebase backend.",
+    ],
+    contributions: [
+      "Acted as both designer and developer for the AR experience creator.",
+      "Defined the design system and end-to-end user flow to improve usability.",
+      "Built interactive prototypes to showcase the product's features and functionality.",
+      "Implemented the frontend application, powered by Firebase cloud functions, that drives the creation of augmented realities.",
+    ],
+    process: [
+      {
+        title: "Design system & flow",
+        description:
+          "Established the visual language and mapped the user flow in Figma so the AR creation process felt guided rather than technical.",
+      },
+      {
+        title: "Prototyping",
+        description:
+          "Built interactive prototypes to validate and communicate features before committing them to code.",
+      },
+      {
+        title: "Frontend build",
+        description:
+          "Implemented the app in React, wiring it up to Firebase cloud functions to power the augmented-reality creation flow.",
+      },
+    ],
+    gallery: [
+      { src: "/images/projects/mkt/mixr/mixr-0.png", alt: "Mixr AR experience creator interface" },
+      { src: "/images/projects/mkt/mixr/mixr-1.png", alt: "Mixr AR experience creator interface" },
+    ],
+    outcomes: [
+      "Delivered Mixr as a working AR experience creator with a coherent design system and user flow.",
+      "Interactive prototypes made the product's features easy to communicate and validate.",
+      "A Firebase-powered frontend let users create augmented realities smoothly end to end.",
+    ],
+  },
+  {
+    slug: "motorly",
+    title: "Motorly",
+    tagline: "A seamless vehicle search and comparison tool",
+    role: "Frontend Developer & UI/UX Designer",
+    timeframe: "Mar 2021 – Sep 2021",
+    summary:
+      "Shaped the design system and user flow in Figma and built the frontend for a vehicle search and comparison tool, with a focus on a seamless, user-friendly interface.",
+    coverImage: "/images/projects/motorly.png",
+    accentColor: "#FF0042",
+    url: "https://www.motorly.co.nz/",
+    technologies: ["nextjs", "react", "css-modules", "firebase"],
+    designTools: ["figma"],
+    company: {
+      industry: "Automotive · Online Marketplace",
+      about:
+        "Motorly is a vehicle search and comparison platform that helps people find and weigh up cars through a clean, easy-to-use online experience.",
+    },
+    overview:
+      "Motorly set out to make finding and comparing vehicles effortless. My role spanned design and development: shaping the design system and user flow in Figma, then implementing the frontend with a primary focus on a seamless, user-friendly interface for search and comparison.",
+    objectives: [
+      "Make vehicle search and comparison fast and intuitive.",
+      "Establish a design system and user flow that keep the experience consistent.",
+      "Deliver a clean, responsive, user-friendly interface.",
+      "Build on a modern Next.js and Firebase stack.",
+    ],
+    contributions: [
+      "Shaped the design system and user flow using Figma.",
+      "Implemented the frontend, focused on a seamless interface for vehicle search and comparison.",
+      "Built the app on Next.js and React with CSS Modules for styling.",
+      "Integrated a Firebase backend to power the product.",
+    ],
+    process: [
+      {
+        title: "Design system & flow",
+        description:
+          "Defined the visual language and user flow in Figma so search and comparison stayed consistent and intuitive.",
+      },
+      {
+        title: "Frontend build",
+        description:
+          "Implemented the interface with Next.js, React and CSS Modules, prioritising a seamless, user-friendly experience.",
+      },
+      {
+        title: "Backend integration",
+        description:
+          "Connected the app to Firebase to serve vehicle data behind the search and comparison views.",
+      },
+    ],
+    outcomes: [
+      "Delivered a clean, user-friendly interface for searching and comparing vehicles.",
+      "A shared design system and user flow kept the experience consistent throughout.",
+      "A Next.js + Firebase build gave the product a fast, modern foundation.",
+    ],
+  },
 ];
 
 export function getProjects(): Project[] {

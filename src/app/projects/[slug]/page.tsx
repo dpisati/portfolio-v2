@@ -109,7 +109,7 @@ export default async function ProjectCaseStudy({
       {/* Header */}
       <Column maxWidth="s" horizontal="center" align="center" gap="16">
         <SmartLink href={projectsPage.path}>
-          <Text variant="label-strong-m">← {projectsPage.title}</Text>
+          <Text variant="label-strong-xl">←  Back to {projectsPage.title}</Text>
         </SmartLink>
         <Text variant="label-default-s" onBackground="neutral-weak">
           {project.timeframe}
@@ -128,9 +128,10 @@ export default async function ProjectCaseStudy({
         sizes="(max-width: 1024px) 100vw, 1024px"
         aspectRatio="16 / 9"
         radius="l"
+        objectFit="contain"
         alt={`${project.title} cover`}
         src={project.coverImage}
-        style={{ background: project.accentColor }}
+        style={{ background: project.accentColor , padding: "60px"}}
       />
 
       {/* At a glance */}
@@ -161,12 +162,14 @@ export default async function ProjectCaseStudy({
           </Text>
           <ToolTags tools={project.technologies} size="m" />
         </Column>
-        <Column gap="12">
-          <Text variant="label-strong-s" onBackground="neutral-strong">
-            Design tools
-          </Text>
-          <ToolTags tools={project.designTools} size="m" />
-        </Column>
+        {project.designTools.length > 0 && (
+          <Column gap="12">
+            <Text variant="label-strong-s" onBackground="neutral-strong">
+              Design tools
+            </Text>
+            <ToolTags tools={project.designTools} size="m" />
+          </Column>
+        )}
       </Column>
 
       <Line maxWidth="s" background="neutral-alpha-weak" />
@@ -274,11 +277,12 @@ export default async function ProjectCaseStudy({
                 key={i}
                 enlarge
                 radius="m"
+                objectFit="contain"
                 sizes="(max-width: 1024px) 100vw, 512px"
                 aspectRatio="16 / 9"
                 alt={image.alt}
                 src={image.src}
-                border="neutral-alpha-weak"
+                // border="neutral-alpha-weak"
               />
             ))}
           </Grid>
