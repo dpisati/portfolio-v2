@@ -191,21 +191,9 @@ const home: Home = {
     ),
     paragraphs: [
       <>
-        When creating UI, I think in reusable components rather than isolated screens. Every button,
-        card, form, navigation element, and layout is considered part of a scalable design system
-        that can be consistently reused across the product.
-      </>,
+       I design with reusable components in mind, not just individual screens. Every UI element is part of a scalable system that's built for consistency and easy implementation.</>,
       <>
-        I naturally think about component composition, states, variants, responsiveness,
-        accessibility, and how each design decision translates into frontend code. Instead of
-        handing off static mockups, I create interfaces that are structured for efficient
-        development and long-term maintainability.
-      </>,
-      <>
-        This approach helps bridge the gap between design and engineering by reducing ambiguity,
-        minimizing unnecessary complexity, and making implementation more predictable. It also
-        enables faster development, easier maintenance, and a more consistent user experience as
-        products evolve.
+        My process considers component composition, states, responsiveness, accessibility, and how each design translates into frontend code. This results in interfaces that are easier to build, maintain, and scale, creating a smoother collaboration between design and development.
       </>,
     ],
     concepts: ["Component composition", "States", "Variants", "Responsiveness", "Accessibility"],
