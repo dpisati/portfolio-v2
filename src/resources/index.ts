@@ -6,11 +6,15 @@ export {
   home,
   newsletter,
   person,
+  projects,
   social,
   work,
 } from "./content";
 
 export { workExperience } from "./work-experience";
+
+export { getProject, getProjects } from "./projects";
+export type { Project } from "./projects";
 
 export {
   baseURL,

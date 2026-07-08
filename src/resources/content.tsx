@@ -184,18 +184,30 @@ const home: Home = {
     title: "Designing with a Developer's Mindset",
     lead: (
       <>
-        My background in design and frontend development shapes how I approach UI. I design with implementation in mind, thinking in reusable components rather than individual screens.<span className="mindset-highlight">I design for implementation</span>.
+        My background in design and frontend development shapes how I approach UI. I design with
+        implementation in mind, thinking in reusable components rather than individual screens.
+        <span className="mindset-highlight">I design for implementation</span>.
       </>
     ),
     paragraphs: [
       <>
-      I consider component structure, states, responsiveness, accessibility, and how designs translate into frontend code. This helps create interfaces that are consistent, scalable, and easier to build and maintain.  My process considers component composition, states, responsiveness, accessibility, and how each design translates into frontend code. This results in interfaces that are easier to build, maintain, and scale, creating a smoother collaboration between design and development.
+        I consider component structure, states, responsiveness, accessibility, and how designs
+        translate into frontend code. This helps create interfaces that are consistent, scalable,
+        and easier to build and maintain.
+      </>,
+      <>
+        My process considers component composition, states,
+        responsiveness, accessibility, and how each design translates into frontend code. This
+        results in interfaces that are easier to build, maintain, and scale, creating a smoother
+        collaboration between design and development.
       </>,
     ],
     concepts: ["Component composition", "States", "Variants", "Responsiveness", "Accessibility"],
     closing: (
       <>
-        I enjoy collaborating across design and development to create user experiences that are both thoughtful and practical.</>
+        I enjoy collaborating across design and development to create user experiences that are both
+        thoughtful and practical.
+      </>
     ),
   },
 };

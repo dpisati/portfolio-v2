@@ -5,6 +5,8 @@ export { HeadingLink } from "@/components/HeadingLink";
 export { Mailchimp } from "@/components/Mailchimp";
 export { CustomMDX } from "@/components/mdx";
 export { ProjectCard } from "@/components/ProjectCard";
+export { ProjectPreviewCard } from "@/components/projects/ProjectPreviewCard";
+export { ToolTags } from "@/components/projects/ToolTags";
 export { Providers } from "@/components/Providers";
 export { RouteGuard } from "@/components/RouteGuard";
 export { ScrollToHash } from "@/components/ScrollToHash";
