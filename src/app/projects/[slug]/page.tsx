@@ -17,6 +17,7 @@ import {
 } from "@once-ui-system/core";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import styles from "./page.module.scss";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return getProjects().map((project) => ({ slug: project.slug }));
@@ -131,7 +132,8 @@ export default async function ProjectCaseStudy({
         objectFit="contain"
         alt={`${project.title} cover`}
         src={project.coverImage}
-        style={{ background: project.accentColor, padding: "60px" }}
+        className={styles.hero}
+        style={{ background: project.accentColor }}
       />
 
       {/* At a glance */}

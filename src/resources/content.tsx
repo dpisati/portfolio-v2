@@ -61,15 +61,16 @@ const home: Home = {
   },
   subline: (
     <>
-      Passionate about creating intuitive user experiences <br /> and delivering with meticulous
-      attention to detail.
+      I love crafting intuitive user experiences <br /> and sweating the details alongside the
+      teams I work with.
     </>
   ),
   quickPitch: (
     <>
-      I'm an easy-going, collaborative product creator with a formal background in design and a
-      passion for modern front-end engineering. I don't just implement layouts — I focus on the
-      product decisions, business goals, and UX practices that drive real customer value.
+      I'm an easy-going, collaborative product creator with a background in design and a love for
+      modern front-end engineering. Beyond implementing layouts, I try to stay curious about the
+      product decisions, business goals, and UX practices that help a team deliver real value to
+      customers.
     </>
   ),
   philosophy: {
@@ -81,9 +82,9 @@ const home: Home = {
         title: "Design-to-code synergy",
         description: (
           <>
-            A strong foot in both creative and development worlds means zero friction during
-            engineering handoffs. I design with code constraints in mind and build with an
-            uncompromising eye for pixel-perfection, interaction design, and fluid transitions.
+            Having a foot in both the creative and development worlds helps smooth out engineering
+            handoffs. I try to design with code constraints in mind and build with real care for
+            pixel-perfection, interaction design, and fluid transitions.
           </>
         ),
       },
@@ -92,20 +93,20 @@ const home: Home = {
         title: "AI & tooling integration",
         description: (
           <>
-            I embrace new technology paradigms, leaning on AI tools to delegate repetitive,
-            boilerplate work so I can focus my energy on high-leverage decisions: complex UX flows,
-            performance, and features that actually matter to users.
+            I like exploring new technology paradigms, leaning on AI tools to take care of
+            repetitive, boilerplate work so I can spend more energy on the things that matter most:
+            complex UX flows, performance, and features that make a difference for users.
           </>
         ),
       },
       {
         icon: "globe",
-        title: "Radical flexibility",
+        title: "Staying flexible",
         description: (
           <>
-            Startups and modern product teams move fast. I pivot between shifting priorities and
-            changing routes without losing momentum, keeping the big picture in view to deliver
-            value where the team needs it most.
+            Startups and modern product teams move fast. I try to adapt to shifting priorities and
+            changing routes without losing momentum, keeping the big picture in view so I can help
+            out where the team needs it most.
           </>
         ),
       },
@@ -151,18 +152,18 @@ const home: Home = {
         title: "Lifelong student",
         description: (
           <>
-            I love sharing my knowledge with teammates and actively listening to diverse
-            perspectives — true growth is a collective effort.
+            I love sharing what I've learned with teammates and, just as much, listening to
+            different perspectives — I really believe growth is a collective effort.
           </>
         ),
       },
       {
         icon: "document",
-        title: "The Swiss Army knife",
+        title: "Happy to lend a hand",
         description: (
           <>
-            Beyond coding and wireframes, I'm eager to jump into marketing assets, custom
-            illustrations, or strategic product discussions — wherever I can add value.
+            Beyond coding and wireframes, I'm always happy to jump into marketing assets, custom
+            illustrations, or product discussions — wherever I can be useful to the team.
           </>
         ),
       },

@@ -80,7 +80,7 @@ export const projects: Project[] = [
     role: "UX Designer & Frontend Developer",
     timeframe: "Dec 2023 – Present",
     summary:
-      "Leading the design and frontend build of ProWorkflow's next generation of project management, time tracking, quoting and invoicing apps — from Figma mockups through to pixel-perfect React implementation.",
+      "Helping lead the design and frontend build of ProWorkflow's next generation of project management, time tracking, quoting and invoicing apps — from Figma mockups through to pixel-perfect React implementation.",
     coverImage: "/images/projects/proworkflow-main.png",
     accentColor: "#FF5733",
     url: "https://proworkflow.com/",
@@ -102,9 +102,9 @@ export const projects: Project[] = [
       "Improve clarity and usability across dense, data-heavy screens.",
     ],
     contributions: [
-      "Led the end-to-end UX design, creating mockups and prototypes in Figma to validate ideas with decision-makers before build.",
-      "Worked hands-on with the frontend team, implementing designs in React to guarantee pixel-perfect delivery.",
-      "Defined and maintained shared UI components and patterns for consistency across the app suite.",
+      "Helped lead the end-to-end UX design, creating mockups and prototypes in Figma to validate ideas with decision-makers before build.",
+      "Worked hands-on with the frontend team, implementing designs in React to help deliver a pixel-perfect result.",
+      "Helped define and maintain shared UI components and patterns for consistency across the app suite.",
       "Redesigned core screens including the Projects list, Kanban board, Project details and the Gantt chart module.",
       "Added end-to-end coverage with Playwright to protect critical flows as the UI evolved.",
     ],

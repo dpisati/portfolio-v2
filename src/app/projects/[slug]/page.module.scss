@@ -1,0 +1,9 @@
+@use "../../../components/breakpoints.scss" as breakpoints;
+
+.hero {
+  padding: 60px;
+
+  @include breakpoints.m {
+    padding: 20px;
+  }
+}
