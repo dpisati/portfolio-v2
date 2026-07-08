@@ -1,5 +1,5 @@
 import { mappedCareerHistory } from "@/resources/career-history";
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, Gallery, Home, Newsletter, Person, Projects, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -184,24 +184,18 @@ const home: Home = {
     title: "Designing with a Developer's Mindset",
     lead: (
       <>
-        My background in design, combined with frontend development, shapes how I approach every
-        interface. I don't just design for aesthetics—
-        <span className="mindset-highlight">I design for implementation</span>.
+        My background in design and frontend development shapes how I approach UI. I design with implementation in mind, thinking in reusable components rather than individual screens.<span className="mindset-highlight">I design for implementation</span>.
       </>
     ),
     paragraphs: [
       <>
-       I design with reusable components in mind, not just individual screens. Every UI element is part of a scalable system that's built for consistency and easy implementation.</>,
-      <>
-        My process considers component composition, states, responsiveness, accessibility, and how each design translates into frontend code. This results in interfaces that are easier to build, maintain, and scale, creating a smoother collaboration between design and development.
+      I consider component structure, states, responsiveness, accessibility, and how designs translate into frontend code. This helps create interfaces that are consistent, scalable, and easier to build and maintain.  My process considers component composition, states, responsiveness, accessibility, and how each design translates into frontend code. This results in interfaces that are easier to build, maintain, and scale, creating a smoother collaboration between design and development.
       </>,
     ],
     concepts: ["Component composition", "States", "Variants", "Responsiveness", "Accessibility"],
     closing: (
       <>
-        For me, great design isn't only about how it looks—it's about creating experiences that are
-        intuitive for users and practical for developers to build.
-      </>
+        I enjoy collaborating across design and development to create user experiences that are both thoughtful and practical.</>
     ),
   },
 };
@@ -315,6 +309,14 @@ const work: Work = {
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
+};
+
+const projects: Projects = {
+  path: "/projects",
+  label: "Projects",
+  title: `Projects`,
+  description: `In-depth case studies of design and dev projects by ${person.name}`,
+  // Add a new case study by appending to the `projects` array in resources/projects.ts
 };
 
 const gallery: Gallery = {
@@ -545,4 +547,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { about, blog, gallery, home, newsletter, person, social, work };
+export { about, blog, gallery, home, newsletter, person, projects, social, work };
