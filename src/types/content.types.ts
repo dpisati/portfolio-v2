@@ -131,6 +131,21 @@ export interface Home extends BasePageConfig {
       description: React.ReactNode;
     }>;
   };
+  /** Editorial section on designing with a developer's mindset */
+  designMindset?: {
+    display: boolean;
+    /** Small letterspaced label above the heading */
+    eyebrow: string;
+    title: string;
+    /** Lead statement; wrap the emphasized phrase in <span className="mindset-highlight"> */
+    lead: React.ReactNode;
+    /** Body paragraphs rendered in the right column */
+    paragraphs: React.ReactNode[];
+    /** Key concepts rendered as tags */
+    concepts: string[];
+    /** Closing statement shown in the accented card */
+    closing: React.ReactNode;
+  };
 }
 
 /**

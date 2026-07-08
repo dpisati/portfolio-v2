@@ -227,6 +227,74 @@ export default function Home() {
           </Row>
         </Column>
       )}
+      {home.designMindset?.display && (
+        <Column fillWidth gap="48" marginBottom="80">
+          <Row fillWidth paddingRight="128">
+            <Line maxWidth={48} />
+          </Row>
+          <Column fillWidth gap="56" paddingTop="48">
+            <RevealFx fillWidth>
+              <Column gap="16" maxWidth="s">
+                <Text
+                  variant="label-default-s"
+                  onBackground="brand-medium"
+                  className="mindset-eyebrow"
+                >
+                  {home.designMindset.eyebrow}
+                </Text>
+                <Heading as="h2" variant="display-strong-s" wrap="balance" className="mindset-title">
+                  {home.designMindset.title}
+                </Heading>
+              </Column>
+            </RevealFx>
+            <Row fillWidth gap="64" s={{ direction: "column" }}>
+              <RevealFx translateY="12" delay={0.1} flex={5} style={{ minWidth: "260px" }}>
+                <Column gap="32">
+                  <Text
+                    variant="heading-default-l"
+                    wrap="balance"
+                    onBackground="neutral-strong"
+                    className="mindset-lead"
+                  >
+                    {home.designMindset.lead}
+                  </Text>
+                  <Row wrap gap="8">
+                    {home.designMindset.concepts.map((concept) => (
+                      <Tag key={concept} size="l" className="mindset-chip">
+                        {concept}
+                      </Tag>
+                    ))}
+                  </Row>
+                </Column>
+              </RevealFx>
+              <RevealFx translateY="12" delay={0.2} flex={7} style={{ minWidth: "280px" }}>
+                <Column gap="24">
+                  {home.designMindset.paragraphs.map((paragraph, index) => (
+                    <Text key={index} variant="body-default-l" onBackground="neutral-weak">
+                      {paragraph}
+                    </Text>
+                  ))}
+                </Column>
+              </RevealFx>
+            </Row>
+            <RevealFx translateY="16" delay={0.3} fillWidth>
+              <Column fillWidth gap="20" padding="40" radius="l" className="mindset-closing">
+                <div className="mindset-bar" />
+                <Text
+                  variant="heading-default-xl"
+                  wrap="balance"
+                  onBackground="neutral-strong"
+                >
+                  {home.designMindset.closing}
+                </Text>
+              </Column>
+            </RevealFx>
+          </Column>
+          <Row fillWidth paddingLeft="128" horizontal="end">
+            <Line maxWidth={48} />
+          </Row>
+        </Column>
+      )}
       {/* <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx> */}

@@ -178,6 +178,44 @@ const home: Home = {
       },
     ],
   },
+  designMindset: {
+    display: true,
+    eyebrow: "Design × Engineering",
+    title: "Designing with a Developer's Mindset",
+    lead: (
+      <>
+        My background in design, combined with frontend development, shapes how I approach every
+        interface. I don't just design for aesthetics—
+        <span className="mindset-highlight">I design for implementation</span>.
+      </>
+    ),
+    paragraphs: [
+      <>
+        When creating UI, I think in reusable components rather than isolated screens. Every button,
+        card, form, navigation element, and layout is considered part of a scalable design system
+        that can be consistently reused across the product.
+      </>,
+      <>
+        I naturally think about component composition, states, variants, responsiveness,
+        accessibility, and how each design decision translates into frontend code. Instead of
+        handing off static mockups, I create interfaces that are structured for efficient
+        development and long-term maintainability.
+      </>,
+      <>
+        This approach helps bridge the gap between design and engineering by reducing ambiguity,
+        minimizing unnecessary complexity, and making implementation more predictable. It also
+        enables faster development, easier maintenance, and a more consistent user experience as
+        products evolve.
+      </>,
+    ],
+    concepts: ["Component composition", "States", "Variants", "Responsiveness", "Accessibility"],
+    closing: (
+      <>
+        For me, great design isn't only about how it looks—it's about creating experiences that are
+        intuitive for users and practical for developers to build.
+      </>
+    ),
+  },
 };
 
 const about: About = {

@@ -52,3 +52,123 @@
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+
+/* ======================================================================
+   Designing with a Developer's Mindset — editorial section
+   ====================================================================== */
+
+.mindset-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
+
+/* Animated gradient headline: reads as foreground, shifts into brand. */
+.mindset-title {
+  background-image: linear-gradient(
+    100deg,
+    var(--neutral-on-background-strong) 0%,
+    var(--neutral-on-background-strong) 35%,
+    var(--brand-on-background-strong) 65%,
+    var(--accent-solid-strong) 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: mindset-shine 9s linear infinite;
+}
+
+@keyframes mindset-shine {
+  to {
+    background-position: 220% center;
+  }
+}
+
+/* Emphasized phrase inside the lead statement. */
+.mindset-highlight {
+  background-image: linear-gradient(
+    100deg,
+    var(--brand-on-background-strong),
+    var(--accent-solid-strong)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mindset-lead {
+  letter-spacing: -0.01em;
+}
+
+/* Concept tags: subtle brand tint so they lift off the surface. */
+.mindset-chip {
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.mindset-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-alpha-strong);
+}
+
+/* Closing statement in a card with a soft glow and gradient hairline border. */
+.mindset-closing {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      120% 140% at 0% 0%,
+      var(--brand-alpha-weak) 0%,
+      transparent 55%
+    ),
+    var(--surface-background, transparent);
+  box-shadow: 0 24px 60px -32px var(--brand-alpha-strong);
+}
+
+/* Gradient hairline border via mask compositing. */
+.mindset-closing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    var(--brand-solid-medium) 0%,
+    transparent 45%,
+    var(--accent-solid-medium) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Short accent bar above the closing statement. */
+.mindset-bar {
+  width: 48px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--brand-solid-strong),
+    var(--accent-solid-strong)
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mindset-title {
+    animation: none;
+  }
+  .mindset-chip {
+    transition: none;
+  }
+}
