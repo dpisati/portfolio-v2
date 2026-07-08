@@ -189,6 +189,8 @@ export interface About extends BasePageConfig {
     title: string;
     /** List of work experiences */
     experiences: Array<{
+      /** Slug matching a /projects/[slug] case study, when one exists */
+      slug?: string;
       /** Company name */
       company: string;
       /** Timeframe of employment */

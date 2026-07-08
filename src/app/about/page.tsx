@@ -2,6 +2,7 @@ import styles from "@/components/about/about.module.scss";
 import TableOfContents from "@/components/about/TableOfContents";
 import SkillIcon from "@/components/SkillIcon";
 import { about, baseURL, person, social } from "@/resources";
+import { getProject } from "@/resources/projects";
 import { toolLookup } from "@/resources/tools";
 import {
   Avatar,
@@ -14,6 +15,7 @@ import {
   Meta,
   Row,
   Schema,
+  SmartLink,
   Tag,
   Text,
 } from "@once-ui-system/core";
@@ -227,6 +229,15 @@ export default function About() {
                     <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
                       {experience.role}
                     </Text>
+                    {experience.slug && getProject(experience.slug) && (
+                      <SmartLink
+                        href={`/projects/${experience.slug}`}
+                        suffixIcon="arrowRight"
+                        style={{ width: "fit-content", marginBottom: "var(--static-space-16)" }}
+                      >
+                        <Text variant="label-strong-s">View case study</Text>
+                      </SmartLink>
+                    )}
                     <Column as="div" gap="16">
                       {experience.achievements.map(
                         (achievement: React.ReactNode, index: number) => (

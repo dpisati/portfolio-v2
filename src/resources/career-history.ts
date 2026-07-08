@@ -258,6 +258,7 @@ export const careerHistory: LegacyCareerEntry[] = [
 
 // Helper transform to match About.work.experiences structure
 export const mappedCareerHistory = careerHistory.map((entry) => ({
+  slug: entry.slug, // used to link to the /projects/[slug] case study when one exists
   company: entry.company,
   timeframe: entry.year,
   role: entry.title,

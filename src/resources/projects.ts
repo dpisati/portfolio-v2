@@ -302,7 +302,15 @@ export const projects: Project[] = [
     coverImage: "/images/projects/phocas-main.png",
     accentColor: "#07b8d6",
     url: "https://www.phocassoftware.com/",
-    technologies: ["react", "typescript", "redux", "material-ui", "emotion-css", "storybook", "jest"],
+    technologies: [
+      "react",
+      "typescript",
+      "redux",
+      "material-ui",
+      "emotion-css",
+      "storybook",
+      "jest",
+    ],
     designTools: [],
     company: {
       industry: "SaaS · Business Intelligence & Analytics",

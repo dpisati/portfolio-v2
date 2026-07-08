@@ -109,7 +109,7 @@ export default async function ProjectCaseStudy({
       {/* Header */}
       <Column maxWidth="s" horizontal="center" align="center" gap="16">
         <SmartLink href={projectsPage.path}>
-          <Text variant="label-strong-xl">←  Back to {projectsPage.title}</Text>
+          <Text variant="label-strong-xl">← Back to {projectsPage.title}</Text>
         </SmartLink>
         <Text variant="label-default-s" onBackground="neutral-weak">
           {project.timeframe}
@@ -131,7 +131,7 @@ export default async function ProjectCaseStudy({
         objectFit="contain"
         alt={`${project.title} cover`}
         src={project.coverImage}
-        style={{ background: project.accentColor , padding: "60px"}}
+        style={{ background: project.accentColor, padding: "60px" }}
       />
 
       {/* At a glance */}

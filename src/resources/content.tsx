@@ -196,10 +196,10 @@ const home: Home = {
         and easier to build and maintain.
       </>,
       <>
-        My process considers component composition, states,
-        responsiveness, accessibility, and how each design translates into frontend code. This
-        results in interfaces that are easier to build, maintain, and scale, creating a smoother
-        collaboration between design and development.
+        My process considers component composition, states, responsiveness, accessibility, and how
+        each design translates into frontend code. This results in interfaces that are easier to
+        build, maintain, and scale, creating a smoother collaboration between design and
+        development.
       </>,
     ],
     concepts: ["Component composition", "States", "Variants", "Responsiveness", "Accessibility"],

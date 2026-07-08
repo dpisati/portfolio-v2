@@ -23,9 +23,9 @@ export function ToolTags({ tools, size = "m" }: ToolTagsProps) {
               display: "flex",
               alignItems: "center",
               gap: "0.4rem",
-              padding: "4px 8px"
+              padding: "4px 8px",
             }}
-          >            
+          >
             {meta.title}
           </Tag>
         );
