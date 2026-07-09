@@ -73,22 +73,20 @@ body {
   font-weight: 600;
 }
 
-/* Animated gradient headline: reads as foreground, shifts into brand. */
+/* Animated gradient headline: reads as foreground, shifts into brand.
+   Kept horizontal (90deg) with matching first/last colors and a tile sized to
+   exactly 200% so the loop repeats seamlessly — a tilted gradient would leave a
+   visible seam each cycle because its diagonal edges can't tile without a jump. */
 .mindset-title {
   background-image: linear-gradient(
-    100deg,
+    90deg,
     var(--neutral-on-background-strong) 0%,
-    var(--brand-on-background-strong) 10%,
-    var(--accent-solid-strong) 25%,
-    var(--brand-on-background-strong) 40%,
-    var(--neutral-on-background-strong) 50%,
-    var(--neutral-on-background-strong) 50%,
-    var(--brand-on-background-strong) 60%,
-    var(--accent-solid-strong) 75%,
-    var(--brand-on-background-strong) 90%,
+    var(--brand-on-background-strong) 25%,
+    var(--accent-solid-strong) 50%,
+    var(--brand-on-background-strong) 75%,
     var(--neutral-on-background-strong) 100%
   );
-  background-size: 220% auto;
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -101,8 +99,11 @@ body {
 }
 
 @keyframes mindset-shine {
+  from {
+    background-position: 0% center;
+  }
   to {
-    background-position: 220% center;
+    background-position: 200% center;
   }
 }
 

@@ -47,7 +47,16 @@ export const Header = () => {
 
   return (
     <>
-      <Fade s={{ hide: true }} fillWidth position="fixed" height="80" zIndex={9} />
+      {/* backdropFilter disabled: a fixed blur re-blurs the page every scroll
+          frame and makes scrolling laggy (esp. Firefox). The gradient fade stays. */}
+      <Fade
+        s={{ hide: true }}
+        fillWidth
+        position="fixed"
+        height="80"
+        zIndex={9}
+        style={{ backdropFilter: "none" }}
+      />
       <Fade
         hide
         s={{ hide: false }}
@@ -57,6 +66,7 @@ export const Header = () => {
         to="top"
         height="80"
         zIndex={9}
+        style={{ backdropFilter: "none" }}
       />
       <Row
         fitHeight
