@@ -72,7 +72,7 @@ export default function Home() {
             fillWidth
             horizontal="center"
             paddingBottom="32"
-            paddingTop="128"
+            paddingTop="64"
           >
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}

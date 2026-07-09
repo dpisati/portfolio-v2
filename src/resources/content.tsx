@@ -192,11 +192,6 @@ const home: Home = {
     ),
     paragraphs: [
       <>
-        I consider component structure, states, responsiveness, accessibility, and how designs
-        translate into frontend code. This helps create interfaces that are consistent, scalable,
-        and easier to build and maintain.
-      </>,
-      <>
         My process considers component composition, states, responsiveness, accessibility, and how
         each design translates into frontend code. This results in interfaces that are easier to
         build, maintain, and scale, creating a smoother collaboration between design and
