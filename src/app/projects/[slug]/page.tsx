@@ -240,6 +240,49 @@ export default async function ProjectCaseStudy({
         </Section>
       )}
 
+      {/* Challenges */}
+      {project.challenges && project.challenges.length > 0 && (
+        <Section title="Challenges & solutions">
+          <Column gap="24">
+            {project.challenges.map((item, i) => (
+              <Column
+                key={i}
+                gap="12"
+                padding="24"
+                radius="l"
+                border="neutral-alpha-weak"
+                background="surface"
+              >
+                <Column gap="4">
+                  <Text variant="label-strong-s" onBackground="neutral-strong">
+                    Challenge
+                  </Text>
+                  <Text variant="body-default-m" onBackground="neutral-weak">
+                    {item.challenge}
+                  </Text>
+                </Column>
+                <Column gap="4">
+                  <Text variant="label-strong-s" onBackground="brand-strong">
+                    Solution
+                  </Text>
+                  <Text variant="body-default-m" onBackground="neutral-weak">
+                    {item.solution}
+                  </Text>
+                </Column>
+              </Column>
+            ))}
+          </Column>
+        </Section>
+      )}
+
+      {/* Outcomes */}
+      {project.outcomes && project.outcomes.length > 0 && (
+        <Section title="Outcomes & impact">
+          <BulletList items={project.outcomes} />
+        </Section>
+      )}
+
+
       {/* Before & After */}
       {project.beforeAfter && project.beforeAfter.length > 0 && (
         <Column fillWidth horizontal="center" gap="40">
@@ -289,48 +332,6 @@ export default async function ProjectCaseStudy({
             ))}
           </Grid>
         </Column>
-      )}
-
-      {/* Challenges */}
-      {project.challenges && project.challenges.length > 0 && (
-        <Section title="Challenges & solutions">
-          <Column gap="24">
-            {project.challenges.map((item, i) => (
-              <Column
-                key={i}
-                gap="12"
-                padding="24"
-                radius="l"
-                border="neutral-alpha-weak"
-                background="surface"
-              >
-                <Column gap="4">
-                  <Text variant="label-strong-s" onBackground="neutral-strong">
-                    Challenge
-                  </Text>
-                  <Text variant="body-default-m" onBackground="neutral-weak">
-                    {item.challenge}
-                  </Text>
-                </Column>
-                <Column gap="4">
-                  <Text variant="label-strong-s" onBackground="brand-strong">
-                    Solution
-                  </Text>
-                  <Text variant="body-default-m" onBackground="neutral-weak">
-                    {item.solution}
-                  </Text>
-                </Column>
-              </Column>
-            ))}
-          </Column>
-        </Section>
-      )}
-
-      {/* Outcomes */}
-      {project.outcomes && project.outcomes.length > 0 && (
-        <Section title="Outcomes & impact">
-          <BulletList items={project.outcomes} />
-        </Section>
       )}
 
       {/* Footer nav */}

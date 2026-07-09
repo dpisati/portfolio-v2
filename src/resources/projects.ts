@@ -156,10 +156,15 @@ export const projects: Project[] = [
       { src: "/images/projects/mkt/proworkflow/File13.png", alt: "ProWorkflow interface design" },
       { src: "/images/projects/mkt/proworkflow/File14.png", alt: "ProWorkflow interface design" },
       { src: "/images/projects/mkt/proworkflow/File15.png", alt: "ProWorkflow interface design" },
-      { src: "/images/projects/mkt/proworkflow/mobile1.png", alt: "ProWorkflow mobile app design" },
-      { src: "/images/projects/mkt/proworkflow/mobile2.png", alt: "ProWorkflow mobile app design" },
-      { src: "/images/projects/mkt/proworkflow/mobile3.png", alt: "ProWorkflow mobile app design" },
-    ],
+      
+      { src: "/images/projects/mkt/proworkflow/nexus-mobile.png", alt: "ProWorkflow mobile app design" },
+
+      { src: "/images/projects/mkt/proworkflow/File24.jpg", alt: "ProWorkflow interface design" },
+      { src: "/images/projects/mkt/proworkflow/File25.jpg", alt: "ProWorkflow interface design" },
+      { src: "/images/projects/mkt/proworkflow/File26.jpg", alt: "ProWorkflow interface design" },
+      { src: "/images/projects/mkt/proworkflow/File27.jpg", alt: "ProWorkflow interface design" },
+
+      ],
     challenges: [
       {
         challenge:

@@ -160,7 +160,7 @@ export default function Home() {
               ))}
             </Row>
           </Column>
-          <Row fillWidth paddingLeft="128" horizontal="end">
+          <Row fillWidth paddingLeft="128" horizontal="end" paddingTop="128">
             <Line maxWidth={48} />
           </Row>
         </Column>
@@ -169,10 +169,8 @@ export default function Home() {
         <div data-accent="cyan" style={{ display: "contents" }}>
           {/* Scope this section's accent tokens to cyan (global accent is red). */}
           <Column fillWidth gap="48" marginBottom="80">
-            <Row fillWidth paddingRight="128">
-              <Line maxWidth={48} />
-            </Row>
-            <Column fillWidth gap="56" paddingTop="48">
+            
+            <Column fillWidth gap="56" paddingTop="0">
               <RevealFx fillWidth>
                 <Column gap="16" maxWidth="s">
                   <Text
@@ -231,7 +229,7 @@ export default function Home() {
                 </Column>
               </RevealFx>
             </Column>
-            <Row fillWidth paddingLeft="128" horizontal="end">
+            <Row fillWidth paddingLeft="128" horizontal="end" paddingTop="128">
               <Line maxWidth={48} />
             </Row>
           </Column>
@@ -271,7 +269,7 @@ export default function Home() {
               ))}
             </Row>
           </Column>
-          <Row fillWidth paddingRight="128" paddingTop="80">
+          <Row fillWidth paddingRight="128"  paddingTop="128">
             <Line maxWidth={48} />
           </Row>
         </Column>

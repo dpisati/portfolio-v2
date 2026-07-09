@@ -90,8 +90,8 @@
 .mindset-highlight {
   background-image: linear-gradient(
     100deg,
-    var(--brand-on-background-strong),
-    var(--accent-solid-strong)
+    var(--accent-solid-strong),
+    var(--accent-solid-medium)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -99,6 +99,7 @@
   color: transparent;
   font-weight: 600;
   white-space: nowrap;
+  padding-left: 8px;
 }
 
 .mindset-lead {
