@@ -10,5 +10,6 @@ export { ToolTags } from "@/components/projects/ToolTags";
 export { Providers } from "@/components/Providers";
 export { RouteGuard } from "@/components/RouteGuard";
 export { ScrollToHash } from "@/components/ScrollToHash";
+export { ScrollToTop } from "@/components/ScrollToTop";
 export { ThemeToggle } from "@/components/ThemeToggle";
 export { WorkExperienceCard } from "@/components/work/WorkExperienceCard";

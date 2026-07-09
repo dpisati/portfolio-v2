@@ -53,6 +53,16 @@
   /*
 }*/
 
+/* Once-ui sets `* { scroll-behavior: smooth }`, which makes Next's
+   scroll-to-top on route change animate and land a few px short as the new
+   page reflows. Force the viewport to jump instantly. In-page smooth scrolls
+   (TableOfContents, ScrollToHash) pass `behavior: "smooth"` explicitly in JS,
+   so they are unaffected by this. */
+html,
+body {
+  scroll-behavior: auto;
+}
+
 /* ======================================================================
    Designing with a Developer's Mindset — editorial section
    ====================================================================== */
@@ -84,6 +94,10 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
   animation: mindset-shine 9s linear infinite;
+  /* Skip painting the animated gradient text once it scrolls off-screen,
+     so the infinite animation stops competing with scroll in Firefox. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto none;
 }
 
 @keyframes mindset-shine {
