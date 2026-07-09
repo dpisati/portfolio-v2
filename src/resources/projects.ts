@@ -370,7 +370,7 @@ export const projects: Project[] = [
     summary:
       "Designed and built Mixr, an AR experience creator — defining the design system and user flow in Figma, then shipping a frontend app powered by Firebase cloud functions.",
     coverImage: "/images/projects/mixr.png",
-    accentColor: "#15aca3",
+    accentColor: "#7D44A1",
     url: "https://tripod-digital.co.nz/",
     technologies: ["react", "typescript", "sass", "firebase"],
     designTools: ["figma"],
