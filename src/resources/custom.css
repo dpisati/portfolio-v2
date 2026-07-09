@@ -102,6 +102,7 @@ body {
   from {
     background-position: 0% center;
   }
+
   to {
     background-position: 200% center;
   }
@@ -175,6 +176,7 @@ body {
   .mindset-title {
     animation: none;
   }
+
   .mindset-chip {
     transition: none;
   }
