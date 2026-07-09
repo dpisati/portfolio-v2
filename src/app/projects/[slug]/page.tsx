@@ -282,7 +282,6 @@ export default async function ProjectCaseStudy({
         </Section>
       )}
 
-
       {/* Before & After */}
       {project.beforeAfter && project.beforeAfter.length > 0 && (
         <Column fillWidth horizontal="center" gap="40">

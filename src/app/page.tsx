@@ -1,12 +1,22 @@
 import { Posts } from "@/components/blog/Posts";
 import { ContactForm } from "@/components/ContactForm";
+import { ProjectPreviewCard } from "@/components";
 import { Projects } from "@/components/work/Projects";
-import { about, baseURL, home, person, routes } from "@/resources";
+import {
+  about,
+  baseURL,
+  getProjects,
+  home,
+  person,
+  projects as projectsPage,
+  routes,
+} from "@/resources";
 import {
   Avatar,
   Badge,
   Button,
   Column,
+  Grid,
   Heading,
   Icon,
   Line,
@@ -29,6 +39,8 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
+  const featuredProjects = getProjects().slice(0, home.selectedWork?.count ?? 2);
+
   return (
     <Column maxWidth="m" gap="128" paddingY="0" horizontal="center">
       <Schema
@@ -170,7 +182,6 @@ export default function Home() {
         <div data-accent="cyan" style={{ display: "contents" }}>
           {/* Scope this section's accent tokens to cyan (global accent is red). */}
           <Column fillWidth gap="48" marginBottom="80">
-            
             <Column fillWidth gap="56" paddingTop="0">
               <RevealFx fillWidth>
                 <Column gap="16" maxWidth="s">
@@ -236,6 +247,54 @@ export default function Home() {
           </Column>
         </div>
       )}
+      {home.selectedWork?.display && (
+        <Column fillWidth gap="48" marginBottom="80">
+          <Column fillWidth horizontal="center" gap="24">
+            <RevealFx fillWidth horizontal="center">
+              <Heading as="h2" variant="display-strong-xs" wrap="balance" align="center">
+                {home.selectedWork.title}
+              </Heading>
+            </RevealFx>
+            <RevealFx fillWidth horizontal="center" delay={0.1}>
+              <Text
+                variant="body-default-l"
+                onBackground="neutral-weak"
+                align="center"
+                wrap="balance"
+                style={{ maxWidth: "var(--responsive-width-s)" }}
+              >
+                {home.selectedWork.description}
+              </Text>
+            </RevealFx>
+          </Column>
+          <Grid fillWidth columns="2" s={{ columns: 1 }} gap="24" paddingTop="24">
+            {featuredProjects.map((project, index) => (
+              <RevealFx key={project.slug} translateY="16" delay={0.1 * (index + 1)} fillWidth>
+                <ProjectPreviewCard project={project} priority={index < 2} />
+              </RevealFx>
+            ))}
+          </Grid>
+          <RevealFx horizontal="center" delay={0.3}>
+            <Button
+              id="view-all-projects"
+              data-border="rounded"
+              href={projectsPage.path}
+              variant="secondary"
+              size="m"
+              weight="default"
+              arrowIcon
+            >
+              <Row gap="8" vertical="center" paddingRight="4">
+                <Icon name="laptop" size="m" style={{ marginLeft: "-0.25rem" }} />
+                {home.selectedWork.cta}
+              </Row>
+            </Button>
+          </RevealFx>
+          <Row fillWidth paddingRight="128" paddingTop="128">
+            <Line maxWidth={48} />
+          </Row>
+        </Column>
+      )}
       {home.toolkit?.display && (
         <Column fillWidth gap="48" marginBottom="80">
           <Column fillWidth horizontal="center" gap="48">
@@ -270,7 +329,7 @@ export default function Home() {
               ))}
             </Row>
           </Column>
-          <Row fillWidth paddingRight="128"  paddingTop="128">
+          <Row fillWidth paddingRight="128" paddingTop="128">
             <Line maxWidth={48} />
           </Row>
         </Column>

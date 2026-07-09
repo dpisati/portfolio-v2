@@ -68,9 +68,15 @@
   background-image: linear-gradient(
     100deg,
     var(--neutral-on-background-strong) 0%,
-    var(--neutral-on-background-strong) 35%,
-    var(--brand-on-background-strong) 65%,
-    var(--accent-solid-strong) 100%
+    var(--brand-on-background-strong) 10%,
+    var(--accent-solid-strong) 25%,
+    var(--brand-on-background-strong) 40%,
+    var(--neutral-on-background-strong) 50%,
+    var(--neutral-on-background-strong) 50%,
+    var(--brand-on-background-strong) 60%,
+    var(--accent-solid-strong) 75%,
+    var(--brand-on-background-strong) 90%,
+    var(--neutral-on-background-strong) 100%
   );
   background-size: 220% auto;
   -webkit-background-clip: text;
@@ -88,11 +94,7 @@
 
 /* Emphasized phrase inside the lead statement. */
 .mindset-highlight {
-  background-image: linear-gradient(
-    100deg,
-    var(--accent-solid-strong),
-    var(--accent-solid-medium)
-  );
+  background-image: linear-gradient(100deg, var(--accent-solid-strong), var(--brand-alpha-strong));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

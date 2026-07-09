@@ -131,6 +131,16 @@ export interface Home extends BasePageConfig {
       description: React.ReactNode;
     }>;
   };
+  /** Selected work section linking through to the /projects page */
+  selectedWork?: {
+    display: boolean;
+    title: string;
+    description: React.ReactNode;
+    /** Label for the button linking to the full projects page */
+    cta: string;
+    /** Number of featured project cards to show */
+    count: number;
+  };
   /** Editorial section on designing with a developer's mindset */
   designMindset?: {
     display: boolean;

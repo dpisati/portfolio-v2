@@ -61,8 +61,8 @@ const home: Home = {
   },
   subline: (
     <>
-      I love crafting intuitive user experiences <br /> and sweating the details alongside the
-      teams I work with.
+      I love crafting intuitive user experiences <br /> and sweating the details alongside the teams
+      I work with.
     </>
   ),
   quickPitch: (
@@ -179,14 +179,25 @@ const home: Home = {
       },
     ],
   },
+  selectedWork: {
+    display: true,
+    title: "Selected work",
+    description: (
+      <>
+        A handful of products I've helped design and build — each one a full case study covering my
+        role, the process, and the outcomes.
+      </>
+    ),
+    cta: "View all projects",
+    count: 2,
+  },
   designMindset: {
     display: true,
     eyebrow: "Design × Engineering",
     title: "Designing with a Developer's Mindset",
     lead: (
       <>
-        My background in design and frontend development shapes how I approach UI. I design with
-        implementation in mind, thinking in reusable components rather than individual screens.
+        My background in design and frontend development shapes how I approach UI.{" "}
         <span className="mindset-highlight">I design for implementation</span>.
       </>
     ),
