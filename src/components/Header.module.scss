@@ -13,7 +13,8 @@
 }
 
 @media (max-width: breakpoints.$s) {
-    .position {
+    header.position {
+        position: fixed;
         top: auto;
         bottom: var(--static-space-24);
     }
