@@ -9,7 +9,7 @@ interface SkillIconProps {
 
 export const SkillIcon: React.FC<SkillIconProps> = ({ title, src }) => {
   const ref = React.useRef<HTMLImageElement | null>(null);
-  console.log(`src: `, src);
+  console.log("src: ", src);
 
   return (
     <Image

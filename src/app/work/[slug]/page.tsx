@@ -16,7 +16,7 @@ import {
   SmartLink,
   Text,
 } from "@once-ui-system/core";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
@@ -36,7 +36,7 @@ export async function generateMetadata({
     : routeParams.slug || "";
 
   const posts = getPosts(["src", "app", "work", "projects"]);
-  let post = posts.find((post) => post.slug === slugPath);
+  const post = posts.find((post) => post.slug === slugPath);
   // Find rich experience entry from careerHistory (fallback to simplified mapping if needed)
   const fullExperience = careerHistory.find((e) => e.slug === slugPath);
   const experience = fullExperience || workExperience.find((e) => e.slug === slugPath);
@@ -84,7 +84,7 @@ export default async function Project({
     : routeParams.slug || "";
 
   const posts = getPosts(["src", "app", "work", "projects"]);
-  let post = posts.find((post) => post.slug === slugPath);
+  const post = posts.find((post) => post.slug === slugPath);
   const fullExperience = careerHistory.find((e) => e.slug === slugPath);
   const experience = fullExperience || workExperience.find((e) => e.slug === slugPath);
 
@@ -231,12 +231,12 @@ export default async function Project({
                     <BeforeAndAfter
                       before={{
                         src: ba.before,
-                        alt: ba.description + " before",
+                        alt: `${ba.description} before`,
                         label: "Before",
                       }}
                       after={{
                         src: ba.after,
-                        alt: ba.description + " after",
+                        alt: `${ba.description} after`,
                         label: "After",
                       }}
                       aspectRatio="16 / 9"

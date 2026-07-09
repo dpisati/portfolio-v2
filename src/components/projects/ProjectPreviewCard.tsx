@@ -1,5 +1,5 @@
-import type { Project } from "@/resources/projects";
 import { ToolTags } from "@/components/projects/ToolTags";
+import type { Project } from "@/resources/projects";
 import { Card, Column, Heading, Media, Row, Text } from "@once-ui-system/core";
 
 interface ProjectPreviewCardProps {

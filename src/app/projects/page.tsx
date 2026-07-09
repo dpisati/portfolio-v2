@@ -2,6 +2,7 @@ import { ProjectPreviewCard } from "@/components";
 import { about, baseURL, person, projects as projectsPage } from "@/resources";
 import { getProjects } from "@/resources/projects";
 import { Column, Grid, Heading, Meta, Schema, Text } from "@once-ui-system/core";
+import styles from "./page.module.scss";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -40,7 +41,7 @@ export default function Projects() {
           covering my role, the process, before &amp; after comparisons, and the outcomes.
         </Text>
       </Column>
-      <Grid fillWidth columns="2" s={{ columns: 1 }} gap="24" marginBottom="40">
+      <Grid fillWidth columns="2" s={{ columns: 1 }} marginBottom="40" className={styles.grid}>
         {allProjects.map((project, index) => (
           <ProjectPreviewCard key={project.slug} project={project} priority={index < 2} />
         ))}

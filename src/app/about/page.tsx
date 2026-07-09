@@ -1,6 +1,6 @@
-import styles from "@/components/about/about.module.scss";
-import TableOfContents from "@/components/about/TableOfContents";
 import SkillIcon from "@/components/SkillIcon";
+import TableOfContents from "@/components/about/TableOfContents";
+import styles from "@/components/about/about.module.scss";
 import { about, baseURL, person, social } from "@/resources";
 import { getProject } from "@/resources/projects";
 import { toolLookup } from "@/resources/tools";

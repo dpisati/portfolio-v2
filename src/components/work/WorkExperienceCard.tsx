@@ -1,5 +1,5 @@
 import { Column, Heading, Media, Row, SmartLink, Text } from "@once-ui-system/core";
-import React from "react";
+import type React from "react";
 // Using the lightweight mapped structure from workExperience export
 interface SimpleExperience {
   slug: string;

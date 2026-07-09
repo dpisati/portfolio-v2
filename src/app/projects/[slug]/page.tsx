@@ -1,6 +1,6 @@
 import { BeforeAndAfter, ScrollToHash, ToolTags } from "@/components";
 import { about, baseURL, person, projects as projectsPage } from "@/resources";
-import { getProject, getProjects, type Project } from "@/resources/projects";
+import { type Project, getProject, getProjects } from "@/resources/projects";
 import {
   Column,
   Flex,
@@ -15,7 +15,7 @@ import {
   Tag,
   Text,
 } from "@once-ui-system/core";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import styles from "./page.module.scss";
 

@@ -1,6 +1,6 @@
-import { Posts } from "@/components/blog/Posts";
-import { ContactForm } from "@/components/ContactForm";
 import { ProjectPreviewCard } from "@/components";
+import { ContactForm } from "@/components/ContactForm";
+import { Posts } from "@/components/blog/Posts";
 import { Projects } from "@/components/work/Projects";
 import {
   about,
@@ -91,7 +91,7 @@ export default function Home() {
               {home.headline}
             </Heading>
           </RevealFx>
-          <RevealFx
+          {/* <RevealFx
             translateY="8"
             delay={0.2}
             fillWidth
@@ -102,9 +102,16 @@ export default function Home() {
             <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
               {home.subline}
             </Text>
-          </RevealFx>
+          </RevealFx> */}
           {home.quickPitch && (
-            <RevealFx translateY="8" delay={0.3} fillWidth horizontal="center" paddingBottom="48">
+            <RevealFx
+              translateY="8"
+              delay={0.3}
+              fillWidth
+              horizontal="center"
+              paddingTop="16"
+              paddingBottom="48"
+            >
               <Text wrap="balance" onBackground="neutral-weak" variant="body-default-l">
                 {home.quickPitch}
               </Text>
@@ -267,7 +274,7 @@ export default function Home() {
               </Text>
             </RevealFx>
           </Column>
-          <Grid fillWidth columns="2" s={{ columns: 1 }} gap="24" paddingTop="24">
+          <Grid fillWidth columns="2" s={{ columns: 1 }} gap="32" paddingTop="24">
             {featuredProjects.map((project, index) => (
               <RevealFx key={project.slug} translateY="16" delay={0.1 * (index + 1)} fillWidth>
                 <ProjectPreviewCard project={project} priority={index < 2} />

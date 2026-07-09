@@ -7,9 +7,9 @@ import {
   Column,
   Heading,
   Input,
-  opacity as OpacityType,
+  type opacity as OpacityType,
   Row,
-  SpacingToken,
+  type SpacingToken,
   Text,
   Textarea,
 } from "@once-ui-system/core";

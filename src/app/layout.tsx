@@ -11,9 +11,9 @@ import {
   Column,
   Flex,
   Meta,
-  opacity as OpacityType,
+  type opacity as OpacityType,
   RevealFx,
-  SpacingToken,
+  type SpacingToken,
 } from "@once-ui-system/core";
 
 export async function generateMetadata() {

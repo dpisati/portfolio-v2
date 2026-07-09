@@ -1,11 +1,21 @@
 import { mappedCareerHistory } from "@/resources/career-history";
-import { About, Blog, Gallery, Home, Newsletter, Person, Projects, Social, Work } from "@/types";
+import type {
+  About,
+  Blog,
+  Gallery,
+  Home,
+  Newsletter,
+  Person,
+  Projects,
+  Social,
+  Work,
+} from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Daniel",
   lastName: "Pisati",
-  name: `Daniel Pisati`,
+  name: "Daniel Pisati",
   role: "Frontend Developer and UX Designer",
   avatar: "/images/avatar.png",
   email: "daniel@pisati.dev",
@@ -202,12 +212,12 @@ const home: Home = {
       </>
     ),
     paragraphs: [
-      <>
+      <div key="single">
         My process considers component composition, states, responsiveness, accessibility, and how
         each design translates into frontend code. This results in interfaces that are easier to
         build, maintain, and scale, creating a smoother collaboration between design and
         development.
-      </>,
+      </div>,
     ],
     concepts: ["Component composition", "States", "Variants", "Responsiveness", "Accessibility"],
     closing: (
@@ -324,7 +334,7 @@ const blog: Blog = {
 const work: Work = {
   path: "/work",
   label: "Work",
-  title: `Work`,
+  title: "Work",
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
@@ -333,7 +343,7 @@ const work: Work = {
 const projects: Projects = {
   path: "/projects",
   label: "Projects",
-  title: `Projects`,
+  title: "Projects",
   description: `In-depth case studies of design and dev projects by ${person.name}`,
   // Add a new case study by appending to the `projects` array in resources/projects.ts
 };
@@ -341,7 +351,7 @@ const projects: Projects = {
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Gallery - Marketing Images`,
+  title: "Gallery - Marketing Images",
   description: `One of my favorite parts of being a designer is helping people 'get it.' Throughout my career, I’ve used my spare cycles to support marketing and sales teams by turning technical concepts into clear, engaging visuals. From posters to educational graphics, these projects are all about making knowledge more accessible.`,
   projects: [
     {

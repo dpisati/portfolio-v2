@@ -1,0 +1,11 @@
+@use "../../components/breakpoints.scss" as breakpoints;
+
+.grid {
+  gap: var(--static-space-32);
+}
+
+@media (max-width: breakpoints.$s) {
+  .grid {
+    row-gap: var(--static-space-64);
+  }
+}
