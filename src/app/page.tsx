@@ -73,6 +73,7 @@ export default function Home() {
             horizontal="center"
             paddingBottom="32"
             paddingTop="64"
+            s={{ paddingTop: "20" }}
           >
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
