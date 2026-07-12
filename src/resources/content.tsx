@@ -204,7 +204,7 @@ const home: Home = {
   designMindset: {
     display: true,
     eyebrow: "Design × Engineering",
-    title: "Designing with a Developer's Mindset",
+    title: "Developing with a Designer's Mindset",
     lead: (
       <>
         My background in design and frontend development shapes how I approach UI.{" "}
