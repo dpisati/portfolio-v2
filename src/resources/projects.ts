@@ -143,7 +143,7 @@ export const projects: Project[] = [
       },
       {
         before: "/images/projects/before-after/proworkflow/PWF_B_04.png",
-        after: "/images/projects/before-after/proworkflow/PWF_A_04.png",
+        after: "/images/projects/before-after/proworkflow/PWF_A_04-2.png",
         description: "Gantt Chart Module",
       },
     ],
