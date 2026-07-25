@@ -3,6 +3,7 @@ export { Footer } from "@/components/Footer";
 export { Header } from "@/components/Header";
 export { HeadingLink } from "@/components/HeadingLink";
 export { Mailchimp } from "@/components/Mailchimp";
+export { EnlargeableMedia } from "@/components/media/EnlargeableMedia";
 export { CustomMDX } from "@/components/mdx";
 export { ProjectCard } from "@/components/ProjectCard";
 export { ProjectPreviewCard } from "@/components/projects/ProjectPreviewCard";

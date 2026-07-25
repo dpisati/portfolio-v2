@@ -1,4 +1,4 @@
-import { BeforeAndAfter, ScrollToHash, ToolTags } from "@/components";
+import { BeforeAndAfter, EnlargeableMedia, ScrollToHash, ToolTags } from "@/components";
 import { about, baseURL, person, projects as projectsPage } from "@/resources";
 import { type Project, getProject, getProjects } from "@/resources/projects";
 import {
@@ -317,9 +317,8 @@ export default async function ProjectCaseStudy({
           </Heading>
           <Grid columns="2" s={{ columns: 1 }} gap="16" fillWidth>
             {project.gallery.map((image, i) => (
-              <Media
+              <EnlargeableMedia
                 key={i}
-                enlarge
                 radius="m"
                 objectFit="contain"
                 sizes="(max-width: 1024px) 100vw, 512px"

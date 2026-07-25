@@ -1,3 +1,4 @@
+import { EnlargeableMedia } from "@/components/media/EnlargeableMedia";
 import { MDXRemote, type MDXRemoteProps } from "next-mdx-remote/rsc";
 import type React from "react";
 import type { ReactNode } from "react";
@@ -64,10 +65,9 @@ function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
   }
 
   return (
-    <Media
+    <EnlargeableMedia
       marginTop="8"
       marginBottom="16"
-      enlarge
       radius="m"
       border="neutral-alpha-medium"
       sizes="(max-width: 960px) 100vw, 960px"

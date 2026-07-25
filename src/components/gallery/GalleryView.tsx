@@ -1,7 +1,8 @@
 "use client";
 
+import { EnlargeableMedia } from "@/components/media/EnlargeableMedia";
 import { gallery } from "@/resources";
-import { MasonryGrid, Media } from "@once-ui-system/core";
+import { MasonryGrid } from "@once-ui-system/core";
 
 export default function GalleryView() {
   const proworkflow = gallery.projects.find((p) => p.title.toLowerCase() === "proworkflow");
@@ -19,8 +20,7 @@ export default function GalleryView() {
 
           <MasonryGrid columns={2} s={{ columns: 1 }} gap="40">
             {proworkflow.images.map((image, index) => (
-              <Media
-                enlarge
+              <EnlargeableMedia
                 priority={index < 10}
                 sizes="(max-width: 560px) 100vw, 50vw"
                 key={index}
@@ -52,8 +52,7 @@ export default function GalleryView() {
 
           <MasonryGrid columns={2} s={{ columns: 1 }} gap="40">
             {ui.images.map((image, index) => (
-              <Media
-                enlarge
+              <EnlargeableMedia
                 priority={index < 10}
                 sizes="(max-width: 560px) 100vw, 50vw"
                 key={index}
@@ -83,8 +82,7 @@ export default function GalleryView() {
 
           <MasonryGrid columns={2} s={{ columns: 1 }} gap="40">
             {project.images.map((image, index) => (
-              <Media
-                enlarge
+              <EnlargeableMedia
                 priority={index < 10}
                 sizes="(max-width: 560px) 100vw, 50vw"
                 key={index}

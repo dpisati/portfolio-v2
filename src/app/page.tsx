@@ -170,8 +170,10 @@ export default function Home() {
                     border="neutral-alpha-weak"
                     background="surface"
                   >
-                    <Icon name={item.icon} onBackground="brand-medium" size="l" />
-                    <Text variant="heading-strong-m">{item.title}</Text>
+                    <Row gap="8" vertical="center">
+                      <Icon name={item.icon} onBackground="brand-medium" />
+                      <Text variant="heading-strong-m">{item.title}</Text>
+                    </Row>
                     <Text variant="body-default-s" onBackground="neutral-weak">
                       {item.description}
                     </Text>

@@ -1,6 +1,7 @@
 import SkillIcon from "@/components/SkillIcon";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
+import { EnlargeableMedia } from "@/components/media/EnlargeableMedia";
 import { about, baseURL, person, social } from "@/resources";
 import { getProject } from "@/resources/projects";
 import { toolLookup } from "@/resources/tools";
@@ -11,7 +12,6 @@ import {
   Heading,
   Icon,
   IconButton,
-  Media,
   Meta,
   Row,
   Schema,
@@ -284,10 +284,9 @@ export default function About() {
                             minWidth={image.width}
                             height={image.height}
                           >
-                            <Media
-                              enlarge
+                            <EnlargeableMedia
                               radius="m"
-                              sizes={image.width.toString()}
+                              sizes={`${image.width}rem`}
                               alt={image.alt}
                               src={image.src}
                             />
